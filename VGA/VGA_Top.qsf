@@ -75,13 +75,13 @@ set_location_assignment PIN_B9 -to Go[2]
 set_location_assignment PIN_C10 -to Go[1]
 set_location_assignment PIN_B8 -to Go[0]
 set_location_assignment PIN_T22 -to Gset
-set_location_assignment PIN_L8 -to MODE
+set_location_assignment PIN_L2 -to MODE
 set_location_assignment PIN_R22 -to RST
 set_location_assignment PIN_B7 -to Ro[3]
 set_location_assignment PIN_A7 -to Ro[2]
 set_location_assignment PIN_C9 -to Ro[1]
 set_location_assignment PIN_D9 -to Ro[0]
 set_location_assignment PIN_R21 -to Rset
-set_location_assignment PIN_A11 -to HSYNC_N
-set_location_assignment PIN_B11 -to VSYNC_N
+set_location_assignment PIN_A11 -to HSYNC
+set_location_assignment PIN_B11 -to VSYNC
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

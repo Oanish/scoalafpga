@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C20F484) Path("/home/student/Oana Niculescu/output_files/") File("VGA_Top.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C20F484) Path("/home/student/scoalafpga/VGA/output_files/") File("VGA_Top.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

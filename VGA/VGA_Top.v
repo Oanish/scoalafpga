@@ -4,12 +4,13 @@ module VGA_Top (input CLK, RST,
 					 //input [3:0] Ri, Gi, Bi,
 					 input [3:0] Colour,
 					 output DISP_ACTIVE,
-					 output HSYNC, VSYNC, HSYNC_N, VSYNC_N,
+					 output HSYNC, VSYNC,
 					 output [11:0] XPOS, YPOS,
 					 output [3:0] Ro, Go, Bo);
 
 wire P_CLK;
 wire H_ACTIVE, V_ACTIVE;
+wire Mem_HSYNC, Mem_VSYNC;
 reg [11:0] H_VIS, V_VIS;
 reg [7:0] H_FRONT, V_FRONT;
 reg [7:0] H_SYNC, V_SYNC;
@@ -69,22 +70,22 @@ VGA_Sync_Calc DUT2(.P_CLK(P_CLK),				//calculating X position and Horizontal syn
 						 .FRONT(H_FRONT),
 						 .SYNC(H_SYNC),
 						 .BACK(H_BACK),
-						 .OUT_SYNC(HSYNC),
+						 .OUT_SYNC(Mem_HSYNC),
 						 .POSITION(XPOS),
 						 .ACTIVE_ZONE(H_ACTIVE));
 						 
-VGA_Sync_Calc DUT3(.P_CLK(HSYNC),				//calculating Y position and Vertical sync
+VGA_Sync_Calc DUT3(.P_CLK(Mem_HSYNC),				//calculating Y position and Vertical sync
 						 .RST(RST),
 						 .VIS(V_VIS),
 						 .FRONT(V_FRONT),
 						 .SYNC(V_SYNC),
 						 .BACK(V_BACK),
-						 .OUT_SYNC(VSYNC),
+						 .OUT_SYNC(Mem_VSYNC),
 						 .POSITION(YPOS),
 						 .ACTIVE_ZONE(V_ACTIVE));
 						 
-assign HSYNC_N = !HSYNC;
-assign VSYNC_N = !VSYNC;
+assign HSYNC = (MODE)? !Mem_HSYNC : Mem_HSYNC;
+assign VSYNC = (MODE)? !Mem_VSYNC : Mem_VSYNC;
 assign DISP_ACTIVE = H_ACTIVE & V_ACTIVE;		//checking if the current position is within the visible display
 		
 endmodule 
