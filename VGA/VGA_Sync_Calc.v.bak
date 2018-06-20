@@ -1,0 +1,6 @@
+module VGA_Sync_Calc (input P_CLK, RST,
+							 input [12:0] H_VIS, V_VIS,
+							 input [7:0] H_FRONT, V_FRONT,
+							 input [7:0] H_SYNC, V_SYNC,
+							 input [7:0] H_BACK, V_BACK,
+							 output HSYNC, VSYNC);

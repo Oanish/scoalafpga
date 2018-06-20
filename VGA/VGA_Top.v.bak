@@ -1,0 +1,34 @@
+module VGA_Top (input CLK, RST, DISP_ACTIVE,
+					 input [3:0] MODE,
+					 input [7:0] Ri, Gi, Bi,
+					 output HSYNC, VSYNC,
+					 output [11:0] XPOS, YPOS,
+					 output [7:0] Ro, Go, Bo);
+					 
+reg VAL, P_CLK;
+reg [31:0] COUNTER;
+
+always@(MODE)
+	case(MODE)
+		0:VAL=25175000;
+		1:VAL=;
+		2:VAL=;
+		3:VAL=;
+		4:VAL=;
+	endcase
+
+always@(posedge CLK)
+	if(!RST)
+		begin
+			COUNTER <= 0;
+			P_CLK <= 0;
+		end
+	else
+		if(COUNTER == VAL-1)
+			begin
+				P_CLK = !P_CLK;
+				COUNTER <= 0;
+			end
+		else
+			COUNTER <= COUNTER + 1;
+			
