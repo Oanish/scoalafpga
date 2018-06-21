@@ -1,10 +1,16 @@
 module VGA_Freq_Div (input CLK, RST,
-							input [31:0] VAL,
+							input MODE,
 							output reg P_CLK);
 
 reg [31:0] COUNTER;
 
 always@(posedge CLK)
+	case(MODE)
+		0:{P_CLK, COUNTER} <= COUNTER + 16'h80000000;
+		1:{P_CLK, COUNTER} <= COUNTER + 16'h100000000;
+	endcase
+
+/*always@(posedge CLK)
 	if(!RST)											//reset
 		begin
 			COUNTER <= 0;
@@ -20,6 +26,6 @@ always@(posedge CLK)
 						COUNTER <= 0;
 					end
 				else									//incrementation
-					COUNTER <= COUNTER + 1;
+					COUNTER <= COUNTER + 1;*/
 
 endmodule 

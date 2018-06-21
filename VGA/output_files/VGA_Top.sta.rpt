@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for VGA_Top
-Thu Jun 21 11:43:33 2018
+Thu Jun 21 13:08:52 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,42 +16,19 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Slow Model Recovery Summary
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
- 11. Slow Model Setup: 'CLK'
- 12. Slow Model Hold: 'CLK'
- 13. Slow Model Minimum Pulse Width: 'CLK'
- 14. Setup Times
- 15. Hold Times
- 16. Clock to Output Times
- 17. Minimum Clock to Output Times
- 18. Propagation Delay
- 19. Minimum Propagation Delay
- 20. Fast Model Setup Summary
- 21. Fast Model Hold Summary
- 22. Fast Model Recovery Summary
- 23. Fast Model Removal Summary
- 24. Fast Model Minimum Pulse Width Summary
- 25. Fast Model Setup: 'CLK'
- 26. Fast Model Hold: 'CLK'
- 27. Fast Model Minimum Pulse Width: 'CLK'
- 28. Setup Times
- 29. Hold Times
- 30. Clock to Output Times
- 31. Minimum Clock to Output Times
- 32. Propagation Delay
- 33. Minimum Propagation Delay
- 34. Multicorner Timing Analysis Summary
- 35. Setup Times
- 36. Hold Times
- 37. Clock to Output Times
- 38. Minimum Clock to Output Times
- 39. Progagation Delay
- 40. Minimum Progagation Delay
- 41. Setup Transfers
- 42. Hold Transfers
- 43. Report TCCS
- 44. Report RSKM
- 45. Unconstrained Paths
- 46. TimeQuest Timing Analyzer Messages
+ 11. Slow Model Datasheet Report
+ 12. Fast Model Setup Summary
+ 13. Fast Model Hold Summary
+ 14. Fast Model Recovery Summary
+ 15. Fast Model Removal Summary
+ 16. Fast Model Minimum Pulse Width Summary
+ 17. Fast Model Datasheet Report
+ 18. Multicorner Timing Analysis Summary
+ 19. Clock Transfers
+ 20. Report TCCS
+ 21. Report RSKM
+ 22. Unconstrained Paths
+ 23. TimeQuest Timing Analyzer Messages
 
 
 
@@ -98,41 +75,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                          ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
-; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
-; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+----------
+; Clocks ;
+----------
+No clocks to report.
 
 
-+--------------------------------------------------+
-; Slow Model Fmax Summary                          ;
-+------------+-----------------+------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
-+------------+-----------------+------------+------+
-; 200.88 MHz ; 200.88 MHz      ; CLK        ;      ;
-+------------+-----------------+------------+------+
-This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
 
 
-+--------------------------------+
-; Slow Model Setup Summary       ;
-+-------+--------+---------------+
-; Clock ; Slack  ; End Point TNS ;
-+-------+--------+---------------+
-; CLK   ; -3.978 ; -182.624      ;
-+-------+--------+---------------+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
 
 
-+-------------------------------+
-; Slow Model Hold Summary       ;
-+-------+-------+---------------+
-; Clock ; Slack ; End Point TNS ;
-+-------+-------+---------------+
-; CLK   ; 0.445 ; 0.000         ;
-+-------+-------+---------------+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
 
 
 -------------------------------
@@ -147,521 +111,28 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------+
+------------------------------------------
 ; Slow Model Minimum Pulse Width Summary ;
-+-------+--------+-----------------------+
-; Clock ; Slack  ; End Point TNS         ;
-+-------+--------+-----------------------+
-; CLK   ; -1.631 ; -71.285               ;
-+-------+--------+-----------------------+
+------------------------------------------
+No paths to report.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Setup: 'CLK'                                                                                                                       ;
-+--------+-------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                     ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -3.978 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 5.017      ;
-; -3.978 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 5.017      ;
-; -3.978 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 5.017      ;
-; -3.978 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 5.017      ;
-; -3.978 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 5.017      ;
-; -3.978 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 5.017      ;
-; -3.978 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 5.017      ;
-; -3.978 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 5.017      ;
-; -3.978 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 5.017      ;
-; -3.978 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 5.017      ;
-; -3.978 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 5.017      ;
-; -3.978 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 5.017      ;
-; -3.938 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.977      ;
-; -3.938 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.977      ;
-; -3.938 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.977      ;
-; -3.938 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.977      ;
-; -3.938 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.977      ;
-; -3.938 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.977      ;
-; -3.938 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.977      ;
-; -3.938 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.977      ;
-; -3.938 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.977      ;
-; -3.938 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.977      ;
-; -3.938 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.977      ;
-; -3.938 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.977      ;
-; -3.773 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.812      ;
-; -3.773 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.812      ;
-; -3.773 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.812      ;
-; -3.773 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.812      ;
-; -3.773 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.812      ;
-; -3.773 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.812      ;
-; -3.773 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.812      ;
-; -3.773 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.812      ;
-; -3.773 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.812      ;
-; -3.773 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.812      ;
-; -3.773 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.812      ;
-; -3.773 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.812      ;
-; -3.631 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.670      ;
-; -3.631 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.670      ;
-; -3.631 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.670      ;
-; -3.631 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.670      ;
-; -3.631 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.670      ;
-; -3.631 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.670      ;
-; -3.631 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.670      ;
-; -3.631 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.670      ;
-; -3.631 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.670      ;
-; -3.631 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.670      ;
-; -3.631 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.670      ;
-; -3.631 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.670      ;
-; -3.562 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.601      ;
-; -3.562 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.601      ;
-; -3.562 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.601      ;
-; -3.562 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.601      ;
-; -3.562 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.601      ;
-; -3.562 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.601      ;
-; -3.562 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.601      ;
-; -3.562 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.601      ;
-; -3.562 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.601      ;
-; -3.562 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.601      ;
-; -3.562 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.601      ;
-; -3.562 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.601      ;
-; -3.475 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.514      ;
-; -3.475 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.514      ;
-; -3.475 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.514      ;
-; -3.475 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.514      ;
-; -3.475 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.514      ;
-; -3.475 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.514      ;
-; -3.475 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.514      ;
-; -3.475 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.514      ;
-; -3.475 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.514      ;
-; -3.475 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.514      ;
-; -3.475 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.514      ;
-; -3.475 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.514      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[16]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[17]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[18]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[19]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[20]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[21]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[22]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[23]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[24]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[25]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[26]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[27]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[28]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[29]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[31]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.350 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[30]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.388      ;
-; -3.339 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.378      ;
-; -3.339 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.378      ;
-; -3.339 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.378      ;
-; -3.339 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.378      ;
-; -3.339 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.378      ;
-; -3.339 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.378      ;
-; -3.339 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.378      ;
-; -3.339 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.378      ;
-; -3.339 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.378      ;
-; -3.339 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.378      ;
-; -3.339 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.378      ;
-; -3.339 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 4.378      ;
-+--------+-------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+-------------------------------
+; Slow Model Datasheet Report ;
+-------------------------------
+Nothing to report.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Hold: 'CLK'                                                                                                                        ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.445 ; VGA_Freq_Div:DUT1|P_CLK        ; VGA_Freq_Div:DUT1|P_CLK        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
-; 0.629 ; VGA_Freq_Div:DUT1|COUNTER[31]  ; VGA_Freq_Div:DUT1|COUNTER[31]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.915      ;
-; 0.629 ; VGA_Sync_Calc:DUT3|COUNTER[11] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.915      ;
-; 0.968 ; VGA_Freq_Div:DUT1|COUNTER[0]   ; VGA_Freq_Div:DUT1|COUNTER[0]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.254      ;
-; 0.968 ; VGA_Freq_Div:DUT1|COUNTER[16]  ; VGA_Freq_Div:DUT1|COUNTER[16]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.254      ;
-; 0.968 ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.254      ;
-; 0.975 ; VGA_Freq_Div:DUT1|COUNTER[1]   ; VGA_Freq_Div:DUT1|COUNTER[1]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.261      ;
-; 0.975 ; VGA_Freq_Div:DUT1|COUNTER[17]  ; VGA_Freq_Div:DUT1|COUNTER[17]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.261      ;
-; 0.975 ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.261      ;
-; 0.976 ; VGA_Freq_Div:DUT1|COUNTER[2]   ; VGA_Freq_Div:DUT1|COUNTER[2]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.262      ;
-; 0.976 ; VGA_Freq_Div:DUT1|COUNTER[9]   ; VGA_Freq_Div:DUT1|COUNTER[9]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.262      ;
-; 0.976 ; VGA_Freq_Div:DUT1|COUNTER[18]  ; VGA_Freq_Div:DUT1|COUNTER[18]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.262      ;
-; 0.976 ; VGA_Freq_Div:DUT1|COUNTER[25]  ; VGA_Freq_Div:DUT1|COUNTER[25]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.262      ;
-; 0.976 ; VGA_Sync_Calc:DUT2|COUNTER[6]  ; VGA_Sync_Calc:DUT2|COUNTER[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.262      ;
-; 0.976 ; VGA_Sync_Calc:DUT2|COUNTER[8]  ; VGA_Sync_Calc:DUT2|COUNTER[8]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.262      ;
-; 0.976 ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.262      ;
-; 0.977 ; VGA_Freq_Div:DUT1|COUNTER[4]   ; VGA_Freq_Div:DUT1|COUNTER[4]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; VGA_Freq_Div:DUT1|COUNTER[7]   ; VGA_Freq_Div:DUT1|COUNTER[7]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; VGA_Freq_Div:DUT1|COUNTER[11]  ; VGA_Freq_Div:DUT1|COUNTER[11]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; VGA_Freq_Div:DUT1|COUNTER[13]  ; VGA_Freq_Div:DUT1|COUNTER[13]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; VGA_Freq_Div:DUT1|COUNTER[14]  ; VGA_Freq_Div:DUT1|COUNTER[14]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; VGA_Freq_Div:DUT1|COUNTER[15]  ; VGA_Freq_Div:DUT1|COUNTER[15]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; VGA_Freq_Div:DUT1|COUNTER[20]  ; VGA_Freq_Div:DUT1|COUNTER[20]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; VGA_Freq_Div:DUT1|COUNTER[23]  ; VGA_Freq_Div:DUT1|COUNTER[23]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; VGA_Freq_Div:DUT1|COUNTER[27]  ; VGA_Freq_Div:DUT1|COUNTER[27]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; VGA_Freq_Div:DUT1|COUNTER[29]  ; VGA_Freq_Div:DUT1|COUNTER[29]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; VGA_Freq_Div:DUT1|COUNTER[30]  ; VGA_Freq_Div:DUT1|COUNTER[30]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; VGA_Sync_Calc:DUT2|COUNTER[10] ; VGA_Sync_Calc:DUT2|COUNTER[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.985 ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.271      ;
-; 1.015 ; VGA_Freq_Div:DUT1|COUNTER[8]   ; VGA_Freq_Div:DUT1|COUNTER[8]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.301      ;
-; 1.015 ; VGA_Freq_Div:DUT1|COUNTER[24]  ; VGA_Freq_Div:DUT1|COUNTER[24]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.301      ;
-; 1.015 ; VGA_Sync_Calc:DUT2|COUNTER[7]  ; VGA_Sync_Calc:DUT2|COUNTER[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.301      ;
-; 1.015 ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.301      ;
-; 1.016 ; VGA_Freq_Div:DUT1|COUNTER[3]   ; VGA_Freq_Div:DUT1|COUNTER[3]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Freq_Div:DUT1|COUNTER[5]   ; VGA_Freq_Div:DUT1|COUNTER[5]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Freq_Div:DUT1|COUNTER[6]   ; VGA_Freq_Div:DUT1|COUNTER[6]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Freq_Div:DUT1|COUNTER[10]  ; VGA_Freq_Div:DUT1|COUNTER[10]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Freq_Div:DUT1|COUNTER[12]  ; VGA_Freq_Div:DUT1|COUNTER[12]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Freq_Div:DUT1|COUNTER[19]  ; VGA_Freq_Div:DUT1|COUNTER[19]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Freq_Div:DUT1|COUNTER[21]  ; VGA_Freq_Div:DUT1|COUNTER[21]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Freq_Div:DUT1|COUNTER[22]  ; VGA_Freq_Div:DUT1|COUNTER[22]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Freq_Div:DUT1|COUNTER[26]  ; VGA_Freq_Div:DUT1|COUNTER[26]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Freq_Div:DUT1|COUNTER[28]  ; VGA_Freq_Div:DUT1|COUNTER[28]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Sync_Calc:DUT2|COUNTER[4]  ; VGA_Sync_Calc:DUT2|COUNTER[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Sync_Calc:DUT2|COUNTER[5]  ; VGA_Sync_Calc:DUT2|COUNTER[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Sync_Calc:DUT2|COUNTER[9]  ; VGA_Sync_Calc:DUT2|COUNTER[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Sync_Calc:DUT2|COUNTER[11] ; VGA_Sync_Calc:DUT2|COUNTER[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.016 ; VGA_Sync_Calc:DUT3|COUNTER[10] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.302      ;
-; 1.218 ; VGA_Sync_Calc:DUT2|COUNTER[1]  ; VGA_Sync_Calc:DUT2|COUNTER[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.504      ;
-; 1.220 ; VGA_Sync_Calc:DUT2|COUNTER[2]  ; VGA_Sync_Calc:DUT2|COUNTER[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.506      ;
-; 1.226 ; VGA_Sync_Calc:DUT2|COUNTER[0]  ; VGA_Sync_Calc:DUT2|COUNTER[0]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.512      ;
-; 1.265 ; VGA_Sync_Calc:DUT2|COUNTER[3]  ; VGA_Sync_Calc:DUT2|COUNTER[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.551      ;
-; 1.400 ; VGA_Freq_Div:DUT1|COUNTER[0]   ; VGA_Freq_Div:DUT1|COUNTER[1]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.686      ;
-; 1.400 ; VGA_Freq_Div:DUT1|COUNTER[16]  ; VGA_Freq_Div:DUT1|COUNTER[17]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.686      ;
-; 1.400 ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.686      ;
-; 1.407 ; VGA_Freq_Div:DUT1|COUNTER[1]   ; VGA_Freq_Div:DUT1|COUNTER[2]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.693      ;
-; 1.407 ; VGA_Freq_Div:DUT1|COUNTER[17]  ; VGA_Freq_Div:DUT1|COUNTER[18]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.693      ;
-; 1.407 ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.693      ;
-; 1.408 ; VGA_Freq_Div:DUT1|COUNTER[2]   ; VGA_Freq_Div:DUT1|COUNTER[3]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.694      ;
-; 1.408 ; VGA_Freq_Div:DUT1|COUNTER[9]   ; VGA_Freq_Div:DUT1|COUNTER[10]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.694      ;
-; 1.408 ; VGA_Freq_Div:DUT1|COUNTER[18]  ; VGA_Freq_Div:DUT1|COUNTER[19]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.694      ;
-; 1.408 ; VGA_Freq_Div:DUT1|COUNTER[25]  ; VGA_Freq_Div:DUT1|COUNTER[26]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.694      ;
-; 1.408 ; VGA_Sync_Calc:DUT2|COUNTER[8]  ; VGA_Sync_Calc:DUT2|COUNTER[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.694      ;
-; 1.408 ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.694      ;
-; 1.409 ; VGA_Freq_Div:DUT1|COUNTER[30]  ; VGA_Freq_Div:DUT1|COUNTER[31]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.695      ;
-; 1.409 ; VGA_Freq_Div:DUT1|COUNTER[13]  ; VGA_Freq_Div:DUT1|COUNTER[14]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.695      ;
-; 1.409 ; VGA_Freq_Div:DUT1|COUNTER[14]  ; VGA_Freq_Div:DUT1|COUNTER[15]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.695      ;
-; 1.409 ; VGA_Freq_Div:DUT1|COUNTER[29]  ; VGA_Freq_Div:DUT1|COUNTER[30]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.695      ;
-; 1.409 ; VGA_Freq_Div:DUT1|COUNTER[4]   ; VGA_Freq_Div:DUT1|COUNTER[5]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.695      ;
-; 1.409 ; VGA_Freq_Div:DUT1|COUNTER[11]  ; VGA_Freq_Div:DUT1|COUNTER[12]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.695      ;
-; 1.409 ; VGA_Freq_Div:DUT1|COUNTER[20]  ; VGA_Freq_Div:DUT1|COUNTER[21]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.695      ;
-; 1.409 ; VGA_Freq_Div:DUT1|COUNTER[27]  ; VGA_Freq_Div:DUT1|COUNTER[28]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.695      ;
-; 1.409 ; VGA_Sync_Calc:DUT2|COUNTER[10] ; VGA_Sync_Calc:DUT2|COUNTER[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.695      ;
-; 1.409 ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.695      ;
-; 1.417 ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.703      ;
-; 1.448 ; VGA_Freq_Div:DUT1|COUNTER[8]   ; VGA_Freq_Div:DUT1|COUNTER[9]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.734      ;
-; 1.448 ; VGA_Freq_Div:DUT1|COUNTER[24]  ; VGA_Freq_Div:DUT1|COUNTER[25]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.734      ;
-; 1.448 ; VGA_Sync_Calc:DUT2|COUNTER[7]  ; VGA_Sync_Calc:DUT2|COUNTER[8]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.734      ;
-; 1.448 ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.734      ;
-; 1.449 ; VGA_Sync_Calc:DUT3|COUNTER[10] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Sync_Calc:DUT2|COUNTER[5]  ; VGA_Sync_Calc:DUT2|COUNTER[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Freq_Div:DUT1|COUNTER[3]   ; VGA_Freq_Div:DUT1|COUNTER[4]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Freq_Div:DUT1|COUNTER[6]   ; VGA_Freq_Div:DUT1|COUNTER[7]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Freq_Div:DUT1|COUNTER[10]  ; VGA_Freq_Div:DUT1|COUNTER[11]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Freq_Div:DUT1|COUNTER[12]  ; VGA_Freq_Div:DUT1|COUNTER[13]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Freq_Div:DUT1|COUNTER[19]  ; VGA_Freq_Div:DUT1|COUNTER[20]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Freq_Div:DUT1|COUNTER[22]  ; VGA_Freq_Div:DUT1|COUNTER[23]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Freq_Div:DUT1|COUNTER[26]  ; VGA_Freq_Div:DUT1|COUNTER[27]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Freq_Div:DUT1|COUNTER[28]  ; VGA_Freq_Div:DUT1|COUNTER[29]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Sync_Calc:DUT2|COUNTER[9]  ; VGA_Sync_Calc:DUT2|COUNTER[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Freq_Div:DUT1|COUNTER[5]   ; VGA_Freq_Div:DUT1|COUNTER[6]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Freq_Div:DUT1|COUNTER[21]  ; VGA_Freq_Div:DUT1|COUNTER[22]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; VGA_Sync_Calc:DUT2|COUNTER[4]  ; VGA_Sync_Calc:DUT2|COUNTER[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.735      ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Slow Model Minimum Pulse Width: 'CLK'                                                                           ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                         ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------------------+
-; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; CLK   ; Rise       ; CLK                            ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[0]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[0]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[10]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[10]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[11]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[11]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[12]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[12]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[13]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[13]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[14]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[14]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[15]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[15]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[16]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[16]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[17]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[17]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[18]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[18]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[19]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[19]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[1]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[1]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[20]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[20]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[21]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[21]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[22]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[22]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[23]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[23]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[24]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[24]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[25]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[25]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[26]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[26]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[27]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[27]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[28]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[28]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[29]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[29]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[2]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[2]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[30]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[30]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[31]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[31]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[3]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[3]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[4]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[4]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[5]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[5]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[6]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[6]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[7]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[7]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[8]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[8]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[9]   ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[9]   ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|P_CLK        ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|P_CLK        ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[0]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[0]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[10] ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[10] ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[11] ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[11] ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[1]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[1]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[2]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[2]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[3]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[3]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[4]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[4]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[5]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[5]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[6]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[6]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[7]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[7]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[8]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[8]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[9]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[9]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[0]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[0]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[10] ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[10] ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[11] ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[11] ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[1]  ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[1]  ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[2]  ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------------------+
-
-
-+-----------------------------------------------------------------------+
-; Setup Times                                                           ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; MODE      ; CLK        ; 3.197 ; 3.197 ; Rise       ; CLK             ;
-; RST       ; CLK        ; 6.735 ; 6.735 ; Rise       ; CLK             ;
-+-----------+------------+-------+-------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Hold Times                                                              ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; MODE      ; CLK        ; -0.597 ; -0.597 ; Rise       ; CLK             ;
-; RST       ; CLK        ; -5.285 ; -5.285 ; Rise       ; CLK             ;
-+-----------+------------+--------+--------+------------+-----------------+
-
-
-+---------------------------------------------------------------------------+
-; Clock to Output Times                                                     ;
-+-------------+------------+--------+--------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-------------+------------+--------+--------+------------+-----------------+
-; Bo[*]       ; CLK        ; 13.484 ; 13.484 ; Rise       ; CLK             ;
-;  Bo[3]      ; CLK        ; 13.484 ; 13.484 ; Rise       ; CLK             ;
-; DISP_ACTIVE ; CLK        ; 13.691 ; 13.691 ; Rise       ; CLK             ;
-; Go[*]       ; CLK        ; 14.657 ; 14.657 ; Rise       ; CLK             ;
-;  Go[3]      ; CLK        ; 14.657 ; 14.657 ; Rise       ; CLK             ;
-; HSYNC       ; CLK        ; 11.312 ; 11.312 ; Rise       ; CLK             ;
-; Ro[*]       ; CLK        ; 14.199 ; 14.199 ; Rise       ; CLK             ;
-;  Ro[3]      ; CLK        ; 14.199 ; 14.199 ; Rise       ; CLK             ;
-; VSYNC       ; CLK        ; 10.618 ; 10.618 ; Rise       ; CLK             ;
-; XPOS[*]     ; CLK        ; 11.550 ; 11.550 ; Rise       ; CLK             ;
-;  XPOS[0]    ; CLK        ; 10.837 ; 10.837 ; Rise       ; CLK             ;
-;  XPOS[1]    ; CLK        ; 11.069 ; 11.069 ; Rise       ; CLK             ;
-;  XPOS[2]    ; CLK        ; 11.114 ; 11.114 ; Rise       ; CLK             ;
-;  XPOS[3]    ; CLK        ; 11.550 ; 11.550 ; Rise       ; CLK             ;
-;  XPOS[4]    ; CLK        ; 10.975 ; 10.975 ; Rise       ; CLK             ;
-;  XPOS[5]    ; CLK        ; 10.984 ; 10.984 ; Rise       ; CLK             ;
-;  XPOS[6]    ; CLK        ; 10.394 ; 10.394 ; Rise       ; CLK             ;
-;  XPOS[7]    ; CLK        ; 10.404 ; 10.404 ; Rise       ; CLK             ;
-;  XPOS[8]    ; CLK        ; 10.448 ; 10.448 ; Rise       ; CLK             ;
-;  XPOS[9]    ; CLK        ; 10.041 ; 10.041 ; Rise       ; CLK             ;
-; YPOS[*]     ; CLK        ; 11.578 ; 11.578 ; Rise       ; CLK             ;
-;  YPOS[0]    ; CLK        ; 11.578 ; 11.578 ; Rise       ; CLK             ;
-;  YPOS[1]    ; CLK        ; 11.572 ; 11.572 ; Rise       ; CLK             ;
-;  YPOS[2]    ; CLK        ; 10.721 ; 10.721 ; Rise       ; CLK             ;
-;  YPOS[3]    ; CLK        ; 11.560 ; 11.560 ; Rise       ; CLK             ;
-;  YPOS[4]    ; CLK        ; 11.383 ; 11.383 ; Rise       ; CLK             ;
-;  YPOS[5]    ; CLK        ; 10.957 ; 10.957 ; Rise       ; CLK             ;
-;  YPOS[6]    ; CLK        ; 10.568 ; 10.568 ; Rise       ; CLK             ;
-;  YPOS[7]    ; CLK        ; 9.723  ; 9.723  ; Rise       ; CLK             ;
-;  YPOS[8]    ; CLK        ; 11.092 ; 11.092 ; Rise       ; CLK             ;
-;  YPOS[9]    ; CLK        ; 10.814 ; 10.814 ; Rise       ; CLK             ;
-+-------------+------------+--------+--------+------------+-----------------+
-
-
-+---------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                             ;
-+-------------+------------+--------+--------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-------------+------------+--------+--------+------------+-----------------+
-; Bo[*]       ; CLK        ; 9.003  ; 9.003  ; Rise       ; CLK             ;
-;  Bo[3]      ; CLK        ; 9.003  ; 9.003  ; Rise       ; CLK             ;
-; DISP_ACTIVE ; CLK        ; 11.655 ; 11.655 ; Rise       ; CLK             ;
-; Go[*]       ; CLK        ; 10.008 ; 10.008 ; Rise       ; CLK             ;
-;  Go[3]      ; CLK        ; 10.008 ; 10.008 ; Rise       ; CLK             ;
-; HSYNC       ; CLK        ; 8.460  ; 8.460  ; Rise       ; CLK             ;
-; Ro[*]       ; CLK        ; 9.118  ; 9.118  ; Rise       ; CLK             ;
-;  Ro[3]      ; CLK        ; 9.118  ; 9.118  ; Rise       ; CLK             ;
-; VSYNC       ; CLK        ; 8.761  ; 8.761  ; Rise       ; CLK             ;
-; XPOS[*]     ; CLK        ; 8.079  ; 8.079  ; Rise       ; CLK             ;
-;  XPOS[0]    ; CLK        ; 8.331  ; 8.331  ; Rise       ; CLK             ;
-;  XPOS[1]    ; CLK        ; 8.382  ; 8.382  ; Rise       ; CLK             ;
-;  XPOS[2]    ; CLK        ; 8.081  ; 8.081  ; Rise       ; CLK             ;
-;  XPOS[3]    ; CLK        ; 9.319  ; 9.319  ; Rise       ; CLK             ;
-;  XPOS[4]    ; CLK        ; 8.950  ; 8.950  ; Rise       ; CLK             ;
-;  XPOS[5]    ; CLK        ; 8.677  ; 8.677  ; Rise       ; CLK             ;
-;  XPOS[6]    ; CLK        ; 8.298  ; 8.298  ; Rise       ; CLK             ;
-;  XPOS[7]    ; CLK        ; 8.079  ; 8.079  ; Rise       ; CLK             ;
-;  XPOS[8]    ; CLK        ; 9.157  ; 9.157  ; Rise       ; CLK             ;
-;  XPOS[9]    ; CLK        ; 8.751  ; 8.751  ; Rise       ; CLK             ;
-; YPOS[*]     ; CLK        ; 7.654  ; 7.654  ; Rise       ; CLK             ;
-;  YPOS[0]    ; CLK        ; 8.904  ; 8.904  ; Rise       ; CLK             ;
-;  YPOS[1]    ; CLK        ; 8.994  ; 8.994  ; Rise       ; CLK             ;
-;  YPOS[2]    ; CLK        ; 8.358  ; 8.358  ; Rise       ; CLK             ;
-;  YPOS[3]    ; CLK        ; 9.223  ; 9.223  ; Rise       ; CLK             ;
-;  YPOS[4]    ; CLK        ; 8.857  ; 8.857  ; Rise       ; CLK             ;
-;  YPOS[5]    ; CLK        ; 9.524  ; 9.524  ; Rise       ; CLK             ;
-;  YPOS[6]    ; CLK        ; 7.878  ; 7.878  ; Rise       ; CLK             ;
-;  YPOS[7]    ; CLK        ; 7.654  ; 7.654  ; Rise       ; CLK             ;
-;  YPOS[8]    ; CLK        ; 9.004  ; 9.004  ; Rise       ; CLK             ;
-;  YPOS[9]    ; CLK        ; 8.535  ; 8.535  ; Rise       ; CLK             ;
-+-------------+------------+--------+--------+------------+-----------------+
-
-
-+--------------------------------------------------------------+
-; Propagation Delay                                            ;
-+------------+-------------+--------+--------+--------+--------+
-; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
-+------------+-------------+--------+--------+--------+--------+
-; MODE       ; Bo[3]       ; 11.684 ; 12.324 ; 12.324 ; 11.684 ;
-; MODE       ; DISP_ACTIVE ; 12.531 ;        ;        ; 12.531 ;
-; MODE       ; Go[3]       ; 13.497 ; 12.506 ; 12.506 ; 13.497 ;
-; MODE       ; HSYNC       ; 8.738  ; 8.738  ; 8.738  ; 8.738  ;
-; MODE       ; Ro[3]       ; 12.653 ; 13.039 ; 13.039 ; 12.653 ;
-; MODE       ; VSYNC       ; 9.350  ; 9.350  ; 9.350  ; 9.350  ;
-; MODE       ; XPOS[0]     ; 9.677  ;        ;        ; 9.677  ;
-; MODE       ; XPOS[1]     ; 9.909  ;        ;        ; 9.909  ;
-; MODE       ; XPOS[2]     ; 9.954  ;        ;        ; 9.954  ;
-; MODE       ; XPOS[3]     ; 10.390 ;        ;        ; 10.390 ;
-; MODE       ; XPOS[4]     ; 9.815  ;        ;        ; 9.815  ;
-; MODE       ; XPOS[5]     ; 9.824  ;        ;        ; 9.824  ;
-; MODE       ; XPOS[6]     ; 9.234  ;        ;        ; 9.234  ;
-; MODE       ; XPOS[7]     ; 9.244  ;        ;        ; 9.244  ;
-; MODE       ; XPOS[8]     ; 9.288  ;        ;        ; 9.288  ;
-; MODE       ; XPOS[9]     ; 8.881  ;        ;        ; 8.881  ;
-; MODE       ; YPOS[0]     ; 10.523 ;        ;        ; 10.523 ;
-; MODE       ; YPOS[1]     ; 10.517 ;        ;        ; 10.517 ;
-; MODE       ; YPOS[2]     ; 9.666  ;        ;        ; 9.666  ;
-; MODE       ; YPOS[3]     ; 10.505 ;        ;        ; 10.505 ;
-; MODE       ; YPOS[4]     ; 10.328 ;        ;        ; 10.328 ;
-; MODE       ; YPOS[5]     ; 9.902  ;        ;        ; 9.902  ;
-; MODE       ; YPOS[6]     ; 9.513  ;        ;        ; 9.513  ;
-; MODE       ; YPOS[7]     ; 8.668  ;        ;        ; 8.668  ;
-; MODE       ; YPOS[8]     ; 10.037 ;        ;        ; 10.037 ;
-; MODE       ; YPOS[9]     ; 9.759  ;        ;        ; 9.759  ;
-+------------+-------------+--------+--------+--------+--------+
-
-
-+--------------------------------------------------------------+
-; Minimum Propagation Delay                                    ;
-+------------+-------------+--------+--------+--------+--------+
-; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
-+------------+-------------+--------+--------+--------+--------+
-; MODE       ; Bo[3]       ; 9.409  ; 9.452  ; 9.452  ; 9.409  ;
-; MODE       ; DISP_ACTIVE ; 11.395 ;        ;        ; 11.395 ;
-; MODE       ; Go[3]       ; 10.594 ; 10.835 ; 10.835 ; 10.594 ;
-; MODE       ; HSYNC       ; 7.183  ; 7.183  ; 7.183  ; 7.183  ;
-; MODE       ; Ro[3]       ; 9.611  ; 10.679 ; 10.679 ; 9.611  ;
-; MODE       ; VSYNC       ; 7.105  ; 7.105  ; 7.105  ; 7.105  ;
-; MODE       ; XPOS[0]     ; 9.280  ;        ;        ; 9.280  ;
-; MODE       ; XPOS[1]     ; 9.512  ;        ;        ; 9.512  ;
-; MODE       ; XPOS[2]     ; 9.557  ;        ;        ; 9.557  ;
-; MODE       ; XPOS[3]     ; 9.993  ;        ;        ; 9.993  ;
-; MODE       ; XPOS[4]     ; 9.418  ;        ;        ; 9.418  ;
-; MODE       ; XPOS[5]     ; 9.427  ;        ;        ; 9.427  ;
-; MODE       ; XPOS[6]     ; 8.837  ;        ;        ; 8.837  ;
-; MODE       ; XPOS[7]     ; 8.847  ;        ;        ; 8.847  ;
-; MODE       ; XPOS[8]     ; 8.891  ;        ;        ; 8.891  ;
-; MODE       ; XPOS[9]     ; 8.483  ;        ;        ; 8.483  ;
-; MODE       ; YPOS[0]     ; 9.487  ;        ;        ; 9.487  ;
-; MODE       ; YPOS[1]     ; 9.480  ;        ;        ; 9.480  ;
-; MODE       ; YPOS[2]     ; 8.630  ;        ;        ; 8.630  ;
-; MODE       ; YPOS[3]     ; 9.696  ;        ;        ; 9.696  ;
-; MODE       ; YPOS[4]     ; 9.459  ;        ;        ; 9.459  ;
-; MODE       ; YPOS[5]     ; 9.092  ;        ;        ; 9.092  ;
-; MODE       ; YPOS[6]     ; 8.645  ;        ;        ; 8.645  ;
-; MODE       ; YPOS[7]     ; 8.007  ;        ;        ; 8.007  ;
-; MODE       ; YPOS[8]     ; 8.889  ;        ;        ; 8.889  ;
-; MODE       ; YPOS[9]     ; 9.121  ;        ;        ; 9.121  ;
-+------------+-------------+--------+--------+--------+--------+
-
-
-+--------------------------------+
-; Fast Model Setup Summary       ;
-+-------+--------+---------------+
-; Clock ; Slack  ; End Point TNS ;
-+-------+--------+---------------+
-; CLK   ; -0.958 ; -38.541       ;
-+-------+--------+---------------+
-
-
-+-------------------------------+
-; Fast Model Hold Summary       ;
-+-------+-------+---------------+
-; Clock ; Slack ; End Point TNS ;
-+-------+-------+---------------+
-; CLK   ; 0.215 ; 0.000         ;
-+-------+-------+---------------+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
 
 
 -------------------------------
@@ -676,701 +147,32 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------+
+------------------------------------------
 ; Fast Model Minimum Pulse Width Summary ;
-+-------+--------+-----------------------+
-; Clock ; Slack  ; End Point TNS         ;
-+-------+--------+-----------------------+
-; CLK   ; -1.380 ; -58.380               ;
-+-------+--------+-----------------------+
+------------------------------------------
+No paths to report.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Setup: 'CLK'                                                                                                                       ;
-+--------+-------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                     ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.958 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.991      ;
-; -0.958 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.991      ;
-; -0.958 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.991      ;
-; -0.958 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.991      ;
-; -0.958 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.991      ;
-; -0.958 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.991      ;
-; -0.958 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.991      ;
-; -0.958 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.991      ;
-; -0.958 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.991      ;
-; -0.958 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.991      ;
-; -0.958 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.991      ;
-; -0.958 ; VGA_Sync_Calc:DUT2|COUNTER[2] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.991      ;
-; -0.945 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.978      ;
-; -0.945 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.978      ;
-; -0.945 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.978      ;
-; -0.945 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.978      ;
-; -0.945 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.978      ;
-; -0.945 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.978      ;
-; -0.945 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.978      ;
-; -0.945 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.978      ;
-; -0.945 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.978      ;
-; -0.945 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.978      ;
-; -0.945 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.978      ;
-; -0.945 ; VGA_Sync_Calc:DUT2|COUNTER[3] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.978      ;
-; -0.898 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.931      ;
-; -0.898 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.931      ;
-; -0.898 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.931      ;
-; -0.898 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.931      ;
-; -0.898 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.931      ;
-; -0.898 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.931      ;
-; -0.898 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.931      ;
-; -0.898 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.931      ;
-; -0.898 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.931      ;
-; -0.898 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.931      ;
-; -0.898 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.931      ;
-; -0.898 ; VGA_Sync_Calc:DUT2|COUNTER[1] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.931      ;
-; -0.836 ; VGA_Freq_Div:DUT1|COUNTER[0]  ; VGA_Freq_Div:DUT1|COUNTER[31]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.865      ;
-; -0.829 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.862      ;
-; -0.829 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.862      ;
-; -0.829 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.862      ;
-; -0.829 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.862      ;
-; -0.829 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.862      ;
-; -0.829 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.862      ;
-; -0.829 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.862      ;
-; -0.829 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.862      ;
-; -0.829 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.862      ;
-; -0.829 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.862      ;
-; -0.829 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.862      ;
-; -0.829 ; VGA_Sync_Calc:DUT2|COUNTER[4] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.862      ;
-; -0.827 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.860      ;
-; -0.827 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.860      ;
-; -0.827 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.860      ;
-; -0.827 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.860      ;
-; -0.827 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.860      ;
-; -0.827 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.860      ;
-; -0.827 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.860      ;
-; -0.827 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.860      ;
-; -0.827 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.860      ;
-; -0.827 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.860      ;
-; -0.827 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.860      ;
-; -0.827 ; VGA_Sync_Calc:DUT2|COUNTER[0] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.860      ;
-; -0.805 ; VGA_Freq_Div:DUT1|COUNTER[1]  ; VGA_Freq_Div:DUT1|COUNTER[31]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.834      ;
-; -0.801 ; VGA_Freq_Div:DUT1|COUNTER[0]  ; VGA_Freq_Div:DUT1|COUNTER[30]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.830      ;
-; -0.771 ; VGA_Freq_Div:DUT1|COUNTER[2]  ; VGA_Freq_Div:DUT1|COUNTER[31]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.800      ;
-; -0.770 ; VGA_Freq_Div:DUT1|COUNTER[1]  ; VGA_Freq_Div:DUT1|COUNTER[30]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.799      ;
-; -0.766 ; VGA_Freq_Div:DUT1|COUNTER[0]  ; VGA_Freq_Div:DUT1|COUNTER[29]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.795      ;
-; -0.765 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.798      ;
-; -0.765 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.798      ;
-; -0.765 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.798      ;
-; -0.765 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.798      ;
-; -0.765 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.798      ;
-; -0.765 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.798      ;
-; -0.765 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.798      ;
-; -0.765 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.798      ;
-; -0.765 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.798      ;
-; -0.765 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.798      ;
-; -0.765 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.798      ;
-; -0.765 ; VGA_Sync_Calc:DUT2|COUNTER[7] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.798      ;
-; -0.749 ; VGA_Freq_Div:DUT1|COUNTER[3]  ; VGA_Freq_Div:DUT1|COUNTER[31]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.778      ;
-; -0.742 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.775      ;
-; -0.742 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.775      ;
-; -0.742 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.775      ;
-; -0.742 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.775      ;
-; -0.742 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.775      ;
-; -0.742 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.775      ;
-; -0.742 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.775      ;
-; -0.742 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.775      ;
-; -0.742 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.775      ;
-; -0.742 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.775      ;
-; -0.742 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.775      ;
-; -0.742 ; VGA_Sync_Calc:DUT2|COUNTER[5] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.775      ;
-; -0.741 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[16]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.773      ;
-; -0.741 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[17]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.773      ;
-; -0.741 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[18]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.773      ;
-; -0.741 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[19]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.773      ;
-; -0.741 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[20]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.773      ;
-; -0.741 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[21]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.773      ;
-; -0.741 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[22]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.773      ;
-; -0.741 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[23]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.773      ;
-; -0.741 ; VGA_Freq_Div:DUT1|COUNTER[24] ; VGA_Freq_Div:DUT1|COUNTER[24]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.773      ;
-+--------+-------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+-------------------------------
+; Fast Model Datasheet Report ;
+-------------------------------
+Nothing to report.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Hold: 'CLK'                                                                                                                        ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.215 ; VGA_Freq_Div:DUT1|P_CLK        ; VGA_Freq_Div:DUT1|P_CLK        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.243 ; VGA_Freq_Div:DUT1|COUNTER[31]  ; VGA_Freq_Div:DUT1|COUNTER[31]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.395      ;
-; 0.243 ; VGA_Sync_Calc:DUT3|COUNTER[11] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.395      ;
-; 0.355 ; VGA_Freq_Div:DUT1|COUNTER[0]   ; VGA_Freq_Div:DUT1|COUNTER[0]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.507      ;
-; 0.355 ; VGA_Freq_Div:DUT1|COUNTER[16]  ; VGA_Freq_Div:DUT1|COUNTER[16]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.507      ;
-; 0.355 ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.507      ;
-; 0.359 ; VGA_Freq_Div:DUT1|COUNTER[1]   ; VGA_Freq_Div:DUT1|COUNTER[1]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.511      ;
-; 0.359 ; VGA_Freq_Div:DUT1|COUNTER[17]  ; VGA_Freq_Div:DUT1|COUNTER[17]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.511      ;
-; 0.359 ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.511      ;
-; 0.360 ; VGA_Freq_Div:DUT1|COUNTER[2]   ; VGA_Freq_Div:DUT1|COUNTER[2]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
-; 0.360 ; VGA_Freq_Div:DUT1|COUNTER[9]   ; VGA_Freq_Div:DUT1|COUNTER[9]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
-; 0.360 ; VGA_Freq_Div:DUT1|COUNTER[11]  ; VGA_Freq_Div:DUT1|COUNTER[11]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
-; 0.360 ; VGA_Freq_Div:DUT1|COUNTER[18]  ; VGA_Freq_Div:DUT1|COUNTER[18]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
-; 0.360 ; VGA_Freq_Div:DUT1|COUNTER[25]  ; VGA_Freq_Div:DUT1|COUNTER[25]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
-; 0.360 ; VGA_Freq_Div:DUT1|COUNTER[27]  ; VGA_Freq_Div:DUT1|COUNTER[27]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
-; 0.360 ; VGA_Sync_Calc:DUT2|COUNTER[8]  ; VGA_Sync_Calc:DUT2|COUNTER[8]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
-; 0.360 ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
-; 0.361 ; VGA_Freq_Div:DUT1|COUNTER[4]   ; VGA_Freq_Div:DUT1|COUNTER[4]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; VGA_Freq_Div:DUT1|COUNTER[7]   ; VGA_Freq_Div:DUT1|COUNTER[7]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; VGA_Freq_Div:DUT1|COUNTER[13]  ; VGA_Freq_Div:DUT1|COUNTER[13]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; VGA_Freq_Div:DUT1|COUNTER[14]  ; VGA_Freq_Div:DUT1|COUNTER[14]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; VGA_Freq_Div:DUT1|COUNTER[15]  ; VGA_Freq_Div:DUT1|COUNTER[15]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; VGA_Freq_Div:DUT1|COUNTER[20]  ; VGA_Freq_Div:DUT1|COUNTER[20]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; VGA_Freq_Div:DUT1|COUNTER[23]  ; VGA_Freq_Div:DUT1|COUNTER[23]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; VGA_Freq_Div:DUT1|COUNTER[29]  ; VGA_Freq_Div:DUT1|COUNTER[29]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; VGA_Freq_Div:DUT1|COUNTER[30]  ; VGA_Freq_Div:DUT1|COUNTER[30]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; VGA_Sync_Calc:DUT2|COUNTER[6]  ; VGA_Sync_Calc:DUT2|COUNTER[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; VGA_Sync_Calc:DUT2|COUNTER[10] ; VGA_Sync_Calc:DUT2|COUNTER[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
-; 0.363 ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.515      ;
-; 0.371 ; VGA_Freq_Div:DUT1|COUNTER[3]   ; VGA_Freq_Div:DUT1|COUNTER[3]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; VGA_Freq_Div:DUT1|COUNTER[8]   ; VGA_Freq_Div:DUT1|COUNTER[8]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; VGA_Freq_Div:DUT1|COUNTER[10]  ; VGA_Freq_Div:DUT1|COUNTER[10]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; VGA_Freq_Div:DUT1|COUNTER[19]  ; VGA_Freq_Div:DUT1|COUNTER[19]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; VGA_Freq_Div:DUT1|COUNTER[24]  ; VGA_Freq_Div:DUT1|COUNTER[24]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; VGA_Freq_Div:DUT1|COUNTER[26]  ; VGA_Freq_Div:DUT1|COUNTER[26]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; VGA_Sync_Calc:DUT2|COUNTER[4]  ; VGA_Sync_Calc:DUT2|COUNTER[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; VGA_Sync_Calc:DUT2|COUNTER[7]  ; VGA_Sync_Calc:DUT2|COUNTER[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; VGA_Sync_Calc:DUT2|COUNTER[9]  ; VGA_Sync_Calc:DUT2|COUNTER[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; VGA_Sync_Calc:DUT3|COUNTER[10] ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.372 ; VGA_Freq_Div:DUT1|COUNTER[5]   ; VGA_Freq_Div:DUT1|COUNTER[5]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
-; 0.372 ; VGA_Freq_Div:DUT1|COUNTER[6]   ; VGA_Freq_Div:DUT1|COUNTER[6]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
-; 0.372 ; VGA_Freq_Div:DUT1|COUNTER[12]  ; VGA_Freq_Div:DUT1|COUNTER[12]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
-; 0.372 ; VGA_Freq_Div:DUT1|COUNTER[21]  ; VGA_Freq_Div:DUT1|COUNTER[21]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
-; 0.372 ; VGA_Freq_Div:DUT1|COUNTER[22]  ; VGA_Freq_Div:DUT1|COUNTER[22]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
-; 0.372 ; VGA_Freq_Div:DUT1|COUNTER[28]  ; VGA_Freq_Div:DUT1|COUNTER[28]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
-; 0.372 ; VGA_Sync_Calc:DUT2|COUNTER[5]  ; VGA_Sync_Calc:DUT2|COUNTER[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
-; 0.372 ; VGA_Sync_Calc:DUT2|COUNTER[11] ; VGA_Sync_Calc:DUT2|COUNTER[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
-; 0.372 ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
-; 0.372 ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
-; 0.450 ; VGA_Sync_Calc:DUT2|COUNTER[1]  ; VGA_Sync_Calc:DUT2|COUNTER[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.602      ;
-; 0.452 ; VGA_Sync_Calc:DUT2|COUNTER[2]  ; VGA_Sync_Calc:DUT2|COUNTER[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.604      ;
-; 0.452 ; VGA_Sync_Calc:DUT2|COUNTER[0]  ; VGA_Sync_Calc:DUT2|COUNTER[0]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.604      ;
-; 0.464 ; VGA_Sync_Calc:DUT2|COUNTER[3]  ; VGA_Sync_Calc:DUT2|COUNTER[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.616      ;
-; 0.493 ; VGA_Freq_Div:DUT1|COUNTER[0]   ; VGA_Freq_Div:DUT1|COUNTER[1]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.645      ;
-; 0.493 ; VGA_Freq_Div:DUT1|COUNTER[16]  ; VGA_Freq_Div:DUT1|COUNTER[17]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.645      ;
-; 0.493 ; VGA_Sync_Calc:DUT3|COUNTER[0]  ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.645      ;
-; 0.497 ; VGA_Freq_Div:DUT1|COUNTER[1]   ; VGA_Freq_Div:DUT1|COUNTER[2]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.649      ;
-; 0.497 ; VGA_Freq_Div:DUT1|COUNTER[17]  ; VGA_Freq_Div:DUT1|COUNTER[18]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.649      ;
-; 0.497 ; VGA_Sync_Calc:DUT3|COUNTER[1]  ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.649      ;
-; 0.498 ; VGA_Freq_Div:DUT1|COUNTER[2]   ; VGA_Freq_Div:DUT1|COUNTER[3]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.650      ;
-; 0.498 ; VGA_Freq_Div:DUT1|COUNTER[9]   ; VGA_Freq_Div:DUT1|COUNTER[10]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.650      ;
-; 0.498 ; VGA_Freq_Div:DUT1|COUNTER[18]  ; VGA_Freq_Div:DUT1|COUNTER[19]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.650      ;
-; 0.498 ; VGA_Freq_Div:DUT1|COUNTER[25]  ; VGA_Freq_Div:DUT1|COUNTER[26]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.650      ;
-; 0.498 ; VGA_Sync_Calc:DUT2|COUNTER[8]  ; VGA_Sync_Calc:DUT2|COUNTER[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.650      ;
-; 0.498 ; VGA_Sync_Calc:DUT3|COUNTER[2]  ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.650      ;
-; 0.498 ; VGA_Freq_Div:DUT1|COUNTER[11]  ; VGA_Freq_Div:DUT1|COUNTER[12]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.650      ;
-; 0.498 ; VGA_Freq_Div:DUT1|COUNTER[27]  ; VGA_Freq_Div:DUT1|COUNTER[28]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.650      ;
-; 0.499 ; VGA_Freq_Div:DUT1|COUNTER[30]  ; VGA_Freq_Div:DUT1|COUNTER[31]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
-; 0.499 ; VGA_Freq_Div:DUT1|COUNTER[13]  ; VGA_Freq_Div:DUT1|COUNTER[14]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
-; 0.499 ; VGA_Freq_Div:DUT1|COUNTER[14]  ; VGA_Freq_Div:DUT1|COUNTER[15]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
-; 0.499 ; VGA_Freq_Div:DUT1|COUNTER[29]  ; VGA_Freq_Div:DUT1|COUNTER[30]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
-; 0.499 ; VGA_Freq_Div:DUT1|COUNTER[4]   ; VGA_Freq_Div:DUT1|COUNTER[5]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
-; 0.499 ; VGA_Freq_Div:DUT1|COUNTER[20]  ; VGA_Freq_Div:DUT1|COUNTER[21]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
-; 0.499 ; VGA_Sync_Calc:DUT2|COUNTER[10] ; VGA_Sync_Calc:DUT2|COUNTER[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
-; 0.499 ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; VGA_Sync_Calc:DUT3|COUNTER[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
-; 0.501 ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; VGA_Sync_Calc:DUT3|COUNTER[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.653      ;
-; 0.511 ; VGA_Sync_Calc:DUT3|COUNTER[10] ; VGA_Sync_Calc:DUT3|COUNTER[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
-; 0.511 ; VGA_Freq_Div:DUT1|COUNTER[8]   ; VGA_Freq_Div:DUT1|COUNTER[9]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
-; 0.511 ; VGA_Freq_Div:DUT1|COUNTER[10]  ; VGA_Freq_Div:DUT1|COUNTER[11]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
-; 0.511 ; VGA_Freq_Div:DUT1|COUNTER[24]  ; VGA_Freq_Div:DUT1|COUNTER[25]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
-; 0.511 ; VGA_Freq_Div:DUT1|COUNTER[26]  ; VGA_Freq_Div:DUT1|COUNTER[27]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
-; 0.511 ; VGA_Sync_Calc:DUT2|COUNTER[7]  ; VGA_Sync_Calc:DUT2|COUNTER[8]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
-; 0.511 ; VGA_Freq_Div:DUT1|COUNTER[3]   ; VGA_Freq_Div:DUT1|COUNTER[4]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
-; 0.511 ; VGA_Freq_Div:DUT1|COUNTER[19]  ; VGA_Freq_Div:DUT1|COUNTER[20]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
-; 0.511 ; VGA_Sync_Calc:DUT2|COUNTER[9]  ; VGA_Sync_Calc:DUT2|COUNTER[10] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
-; 0.511 ; VGA_Sync_Calc:DUT3|COUNTER[3]  ; VGA_Sync_Calc:DUT3|COUNTER[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
-; 0.511 ; VGA_Sync_Calc:DUT3|COUNTER[8]  ; VGA_Sync_Calc:DUT3|COUNTER[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
-; 0.511 ; VGA_Sync_Calc:DUT2|COUNTER[4]  ; VGA_Sync_Calc:DUT2|COUNTER[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
-; 0.512 ; VGA_Freq_Div:DUT1|COUNTER[6]   ; VGA_Freq_Div:DUT1|COUNTER[7]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.664      ;
-; 0.512 ; VGA_Freq_Div:DUT1|COUNTER[12]  ; VGA_Freq_Div:DUT1|COUNTER[13]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.664      ;
-; 0.512 ; VGA_Freq_Div:DUT1|COUNTER[22]  ; VGA_Freq_Div:DUT1|COUNTER[23]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.664      ;
-; 0.512 ; VGA_Freq_Div:DUT1|COUNTER[28]  ; VGA_Freq_Div:DUT1|COUNTER[29]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.664      ;
-; 0.512 ; VGA_Sync_Calc:DUT2|COUNTER[5]  ; VGA_Sync_Calc:DUT2|COUNTER[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.664      ;
-; 0.512 ; VGA_Sync_Calc:DUT3|COUNTER[6]  ; VGA_Sync_Calc:DUT3|COUNTER[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.664      ;
-; 0.512 ; VGA_Freq_Div:DUT1|COUNTER[5]   ; VGA_Freq_Div:DUT1|COUNTER[6]   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.664      ;
-; 0.512 ; VGA_Freq_Div:DUT1|COUNTER[21]  ; VGA_Freq_Div:DUT1|COUNTER[22]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.664      ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Fast Model Minimum Pulse Width: 'CLK'                                                                           ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                         ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------------------+
-; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                            ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[0]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[0]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[10]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[10]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[11]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[11]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[12]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[12]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[13]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[13]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[14]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[14]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[15]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[15]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[16]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[16]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[17]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[17]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[18]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[18]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[19]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[19]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[1]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[1]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[20]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[20]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[21]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[21]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[22]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[22]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[23]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[23]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[24]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[24]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[25]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[25]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[26]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[26]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[27]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[27]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[28]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[28]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[29]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[29]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[2]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[2]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[30]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[30]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[31]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[31]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[3]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[3]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[4]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[4]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[5]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[5]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[6]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[6]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[7]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[7]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[8]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[8]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[9]   ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|COUNTER[9]   ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|P_CLK        ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Freq_Div:DUT1|P_CLK        ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[0]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[0]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[10] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[10] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[11] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[11] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[1]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[1]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[2]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[2]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[3]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[3]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[4]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[4]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[5]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[5]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[6]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[6]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[7]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[7]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[8]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[8]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[9]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT2|COUNTER[9]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[0]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[0]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[10] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[10] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[11] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[11] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[1]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[1]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; VGA_Sync_Calc:DUT3|COUNTER[2]  ;
-+--------+--------------+----------------+------------------+-------+------------+--------------------------------+
-
-
-+-----------------------------------------------------------------------+
-; Setup Times                                                           ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; MODE      ; CLK        ; 0.753 ; 0.753 ; Rise       ; CLK             ;
-; RST       ; CLK        ; 3.023 ; 3.023 ; Rise       ; CLK             ;
-+-----------+------------+-------+-------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Hold Times                                                              ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; MODE      ; CLK        ; 0.282  ; 0.282  ; Rise       ; CLK             ;
-; RST       ; CLK        ; -2.380 ; -2.380 ; Rise       ; CLK             ;
-+-----------+------------+--------+--------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Clock to Output Times                                                   ;
-+-------------+------------+-------+-------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-------------+------------+-------+-------+------------+-----------------+
-; Bo[*]       ; CLK        ; 6.158 ; 6.158 ; Rise       ; CLK             ;
-;  Bo[3]      ; CLK        ; 6.158 ; 6.158 ; Rise       ; CLK             ;
-; DISP_ACTIVE ; CLK        ; 6.388 ; 6.388 ; Rise       ; CLK             ;
-; Go[*]       ; CLK        ; 6.614 ; 6.614 ; Rise       ; CLK             ;
-;  Go[3]      ; CLK        ; 6.614 ; 6.614 ; Rise       ; CLK             ;
-; HSYNC       ; CLK        ; 5.371 ; 5.371 ; Rise       ; CLK             ;
-; Ro[*]       ; CLK        ; 6.423 ; 6.423 ; Rise       ; CLK             ;
-;  Ro[3]      ; CLK        ; 6.423 ; 6.423 ; Rise       ; CLK             ;
-; VSYNC       ; CLK        ; 5.080 ; 5.080 ; Rise       ; CLK             ;
-; XPOS[*]     ; CLK        ; 5.474 ; 5.474 ; Rise       ; CLK             ;
-;  XPOS[0]    ; CLK        ; 5.231 ; 5.231 ; Rise       ; CLK             ;
-;  XPOS[1]    ; CLK        ; 5.307 ; 5.307 ; Rise       ; CLK             ;
-;  XPOS[2]    ; CLK        ; 5.313 ; 5.313 ; Rise       ; CLK             ;
-;  XPOS[3]    ; CLK        ; 5.474 ; 5.474 ; Rise       ; CLK             ;
-;  XPOS[4]    ; CLK        ; 5.275 ; 5.275 ; Rise       ; CLK             ;
-;  XPOS[5]    ; CLK        ; 5.283 ; 5.283 ; Rise       ; CLK             ;
-;  XPOS[6]    ; CLK        ; 5.043 ; 5.043 ; Rise       ; CLK             ;
-;  XPOS[7]    ; CLK        ; 5.051 ; 5.051 ; Rise       ; CLK             ;
-;  XPOS[8]    ; CLK        ; 5.074 ; 5.074 ; Rise       ; CLK             ;
-;  XPOS[9]    ; CLK        ; 4.948 ; 4.948 ; Rise       ; CLK             ;
-; YPOS[*]     ; CLK        ; 5.512 ; 5.512 ; Rise       ; CLK             ;
-;  YPOS[0]    ; CLK        ; 5.512 ; 5.512 ; Rise       ; CLK             ;
-;  YPOS[1]    ; CLK        ; 5.503 ; 5.503 ; Rise       ; CLK             ;
-;  YPOS[2]    ; CLK        ; 5.169 ; 5.169 ; Rise       ; CLK             ;
-;  YPOS[3]    ; CLK        ; 5.485 ; 5.485 ; Rise       ; CLK             ;
-;  YPOS[4]    ; CLK        ; 5.410 ; 5.410 ; Rise       ; CLK             ;
-;  YPOS[5]    ; CLK        ; 5.259 ; 5.259 ; Rise       ; CLK             ;
-;  YPOS[6]    ; CLK        ; 5.114 ; 5.114 ; Rise       ; CLK             ;
-;  YPOS[7]    ; CLK        ; 4.804 ; 4.804 ; Rise       ; CLK             ;
-;  YPOS[8]    ; CLK        ; 5.325 ; 5.325 ; Rise       ; CLK             ;
-;  YPOS[9]    ; CLK        ; 5.209 ; 5.209 ; Rise       ; CLK             ;
-+-------------+------------+-------+-------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                           ;
-+-------------+------------+-------+-------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-------------+------------+-------+-------+------------+-----------------+
-; Bo[*]       ; CLK        ; 4.527 ; 4.527 ; Rise       ; CLK             ;
-;  Bo[3]      ; CLK        ; 4.527 ; 4.527 ; Rise       ; CLK             ;
-; DISP_ACTIVE ; CLK        ; 5.625 ; 5.625 ; Rise       ; CLK             ;
-; Go[*]       ; CLK        ; 4.929 ; 4.929 ; Rise       ; CLK             ;
-;  Go[3]      ; CLK        ; 4.929 ; 4.929 ; Rise       ; CLK             ;
-; HSYNC       ; CLK        ; 4.352 ; 4.352 ; Rise       ; CLK             ;
-; Ro[*]       ; CLK        ; 4.592 ; 4.592 ; Rise       ; CLK             ;
-;  Ro[3]      ; CLK        ; 4.592 ; 4.592 ; Rise       ; CLK             ;
-; VSYNC       ; CLK        ; 4.449 ; 4.449 ; Rise       ; CLK             ;
-; XPOS[*]     ; CLK        ; 4.213 ; 4.213 ; Rise       ; CLK             ;
-;  XPOS[0]    ; CLK        ; 4.313 ; 4.313 ; Rise       ; CLK             ;
-;  XPOS[1]    ; CLK        ; 4.349 ; 4.349 ; Rise       ; CLK             ;
-;  XPOS[2]    ; CLK        ; 4.228 ; 4.228 ; Rise       ; CLK             ;
-;  XPOS[3]    ; CLK        ; 4.658 ; 4.658 ; Rise       ; CLK             ;
-;  XPOS[4]    ; CLK        ; 4.553 ; 4.553 ; Rise       ; CLK             ;
-;  XPOS[5]    ; CLK        ; 4.456 ; 4.456 ; Rise       ; CLK             ;
-;  XPOS[6]    ; CLK        ; 4.274 ; 4.274 ; Rise       ; CLK             ;
-;  XPOS[7]    ; CLK        ; 4.213 ; 4.213 ; Rise       ; CLK             ;
-;  XPOS[8]    ; CLK        ; 4.616 ; 4.616 ; Rise       ; CLK             ;
-;  XPOS[9]    ; CLK        ; 4.517 ; 4.517 ; Rise       ; CLK             ;
-; YPOS[*]     ; CLK        ; 4.075 ; 4.075 ; Rise       ; CLK             ;
-;  YPOS[0]    ; CLK        ; 4.538 ; 4.538 ; Rise       ; CLK             ;
-;  YPOS[1]    ; CLK        ; 4.577 ; 4.577 ; Rise       ; CLK             ;
-;  YPOS[2]    ; CLK        ; 4.307 ; 4.307 ; Rise       ; CLK             ;
-;  YPOS[3]    ; CLK        ; 4.645 ; 4.645 ; Rise       ; CLK             ;
-;  YPOS[4]    ; CLK        ; 4.499 ; 4.499 ; Rise       ; CLK             ;
-;  YPOS[5]    ; CLK        ; 4.726 ; 4.726 ; Rise       ; CLK             ;
-;  YPOS[6]    ; CLK        ; 4.132 ; 4.132 ; Rise       ; CLK             ;
-;  YPOS[7]    ; CLK        ; 4.075 ; 4.075 ; Rise       ; CLK             ;
-;  YPOS[8]    ; CLK        ; 4.565 ; 4.565 ; Rise       ; CLK             ;
-;  YPOS[9]    ; CLK        ; 4.380 ; 4.380 ; Rise       ; CLK             ;
-+-------------+------------+-------+-------+------------+-----------------+
-
-
-+----------------------------------------------------------+
-; Propagation Delay                                        ;
-+------------+-------------+-------+-------+-------+-------+
-; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+------------+-------------+-------+-------+-------+-------+
-; MODE       ; Bo[3]       ; 4.987 ; 5.221 ; 5.221 ; 4.987 ;
-; MODE       ; DISP_ACTIVE ; 5.451 ;       ;       ; 5.451 ;
-; MODE       ; Go[3]       ; 5.677 ; 5.324 ; 5.324 ; 5.677 ;
-; MODE       ; HSYNC       ; 3.918 ; 3.918 ; 3.918 ; 3.918 ;
-; MODE       ; Ro[3]       ; 5.346 ; 5.486 ; 5.486 ; 5.346 ;
-; MODE       ; VSYNC       ; 4.105 ; 4.105 ; 4.105 ; 4.105 ;
-; MODE       ; XPOS[0]     ; 4.294 ;       ;       ; 4.294 ;
-; MODE       ; XPOS[1]     ; 4.370 ;       ;       ; 4.370 ;
-; MODE       ; XPOS[2]     ; 4.376 ;       ;       ; 4.376 ;
-; MODE       ; XPOS[3]     ; 4.537 ;       ;       ; 4.537 ;
-; MODE       ; XPOS[4]     ; 4.338 ;       ;       ; 4.338 ;
-; MODE       ; XPOS[5]     ; 4.346 ;       ;       ; 4.346 ;
-; MODE       ; XPOS[6]     ; 4.106 ;       ;       ; 4.106 ;
-; MODE       ; XPOS[7]     ; 4.114 ;       ;       ; 4.114 ;
-; MODE       ; XPOS[8]     ; 4.137 ;       ;       ; 4.137 ;
-; MODE       ; XPOS[9]     ; 4.011 ;       ;       ; 4.011 ;
-; MODE       ; YPOS[0]     ; 4.592 ;       ;       ; 4.592 ;
-; MODE       ; YPOS[1]     ; 4.583 ;       ;       ; 4.583 ;
-; MODE       ; YPOS[2]     ; 4.249 ;       ;       ; 4.249 ;
-; MODE       ; YPOS[3]     ; 4.565 ;       ;       ; 4.565 ;
-; MODE       ; YPOS[4]     ; 4.490 ;       ;       ; 4.490 ;
-; MODE       ; YPOS[5]     ; 4.339 ;       ;       ; 4.339 ;
-; MODE       ; YPOS[6]     ; 4.194 ;       ;       ; 4.194 ;
-; MODE       ; YPOS[7]     ; 3.884 ;       ;       ; 3.884 ;
-; MODE       ; YPOS[8]     ; 4.405 ;       ;       ; 4.405 ;
-; MODE       ; YPOS[9]     ; 4.289 ;       ;       ; 4.289 ;
-+------------+-------------+-------+-------+-------+-------+
-
-
-+----------------------------------------------------------+
-; Minimum Propagation Delay                                ;
-+------------+-------------+-------+-------+-------+-------+
-; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+------------+-------------+-------+-------+-------+-------+
-; MODE       ; Bo[3]       ; 4.131 ; 4.168 ; 4.168 ; 4.131 ;
-; MODE       ; DISP_ACTIVE ; 5.050 ;       ;       ; 5.050 ;
-; MODE       ; Go[3]       ; 4.621 ; 4.747 ; 4.747 ; 4.621 ;
-; MODE       ; HSYNC       ; 3.378 ; 3.378 ; 3.378 ; 3.378 ;
-; MODE       ; Ro[3]       ; 4.247 ; 4.660 ; 4.660 ; 4.247 ;
-; MODE       ; VSYNC       ; 3.312 ; 3.312 ; 3.312 ; 3.312 ;
-; MODE       ; XPOS[0]     ; 4.152 ;       ;       ; 4.152 ;
-; MODE       ; XPOS[1]     ; 4.228 ;       ;       ; 4.228 ;
-; MODE       ; XPOS[2]     ; 4.234 ;       ;       ; 4.234 ;
-; MODE       ; XPOS[3]     ; 4.395 ;       ;       ; 4.395 ;
-; MODE       ; XPOS[4]     ; 4.196 ;       ;       ; 4.196 ;
-; MODE       ; XPOS[5]     ; 4.204 ;       ;       ; 4.204 ;
-; MODE       ; XPOS[6]     ; 3.964 ;       ;       ; 3.964 ;
-; MODE       ; XPOS[7]     ; 3.972 ;       ;       ; 3.972 ;
-; MODE       ; XPOS[8]     ; 3.995 ;       ;       ; 3.995 ;
-; MODE       ; XPOS[9]     ; 3.871 ;       ;       ; 3.871 ;
-; MODE       ; YPOS[0]     ; 4.261 ;       ;       ; 4.261 ;
-; MODE       ; YPOS[1]     ; 4.248 ;       ;       ; 4.248 ;
-; MODE       ; YPOS[2]     ; 3.915 ;       ;       ; 3.915 ;
-; MODE       ; YPOS[3]     ; 4.310 ;       ;       ; 4.310 ;
-; MODE       ; YPOS[4]     ; 4.230 ;       ;       ; 4.230 ;
-; MODE       ; YPOS[5]     ; 4.081 ;       ;       ; 4.081 ;
-; MODE       ; YPOS[6]     ; 3.935 ;       ;       ; 3.935 ;
-; MODE       ; YPOS[7]     ; 3.689 ;       ;       ; 3.689 ;
-; MODE       ; YPOS[8]     ; 4.042 ;       ;       ; 4.042 ;
-; MODE       ; YPOS[9]     ; 4.103 ;       ;       ; 4.103 ;
-+------------+-------------+-------+-------+-------+-------+
-
-
-+--------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                            ;
-+------------------+----------+-------+----------+---------+---------------------+
-; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -3.978   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
-;  CLK             ; -3.978   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
-; Design-wide TNS  ; -182.624 ; 0.0   ; 0.0      ; 0.0     ; -71.285             ;
-;  CLK             ; -182.624 ; 0.000 ; N/A      ; N/A     ; -71.285             ;
-+------------------+----------+-------+----------+---------+---------------------+
-
-
-+-----------------------------------------------------------------------+
-; Setup Times                                                           ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; MODE      ; CLK        ; 3.197 ; 3.197 ; Rise       ; CLK             ;
-; RST       ; CLK        ; 6.735 ; 6.735 ; Rise       ; CLK             ;
-+-----------+------------+-------+-------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Hold Times                                                              ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; MODE      ; CLK        ; 0.282  ; 0.282  ; Rise       ; CLK             ;
-; RST       ; CLK        ; -2.380 ; -2.380 ; Rise       ; CLK             ;
-+-----------+------------+--------+--------+------------+-----------------+
-
-
-+---------------------------------------------------------------------------+
-; Clock to Output Times                                                     ;
-+-------------+------------+--------+--------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-------------+------------+--------+--------+------------+-----------------+
-; Bo[*]       ; CLK        ; 13.484 ; 13.484 ; Rise       ; CLK             ;
-;  Bo[3]      ; CLK        ; 13.484 ; 13.484 ; Rise       ; CLK             ;
-; DISP_ACTIVE ; CLK        ; 13.691 ; 13.691 ; Rise       ; CLK             ;
-; Go[*]       ; CLK        ; 14.657 ; 14.657 ; Rise       ; CLK             ;
-;  Go[3]      ; CLK        ; 14.657 ; 14.657 ; Rise       ; CLK             ;
-; HSYNC       ; CLK        ; 11.312 ; 11.312 ; Rise       ; CLK             ;
-; Ro[*]       ; CLK        ; 14.199 ; 14.199 ; Rise       ; CLK             ;
-;  Ro[3]      ; CLK        ; 14.199 ; 14.199 ; Rise       ; CLK             ;
-; VSYNC       ; CLK        ; 10.618 ; 10.618 ; Rise       ; CLK             ;
-; XPOS[*]     ; CLK        ; 11.550 ; 11.550 ; Rise       ; CLK             ;
-;  XPOS[0]    ; CLK        ; 10.837 ; 10.837 ; Rise       ; CLK             ;
-;  XPOS[1]    ; CLK        ; 11.069 ; 11.069 ; Rise       ; CLK             ;
-;  XPOS[2]    ; CLK        ; 11.114 ; 11.114 ; Rise       ; CLK             ;
-;  XPOS[3]    ; CLK        ; 11.550 ; 11.550 ; Rise       ; CLK             ;
-;  XPOS[4]    ; CLK        ; 10.975 ; 10.975 ; Rise       ; CLK             ;
-;  XPOS[5]    ; CLK        ; 10.984 ; 10.984 ; Rise       ; CLK             ;
-;  XPOS[6]    ; CLK        ; 10.394 ; 10.394 ; Rise       ; CLK             ;
-;  XPOS[7]    ; CLK        ; 10.404 ; 10.404 ; Rise       ; CLK             ;
-;  XPOS[8]    ; CLK        ; 10.448 ; 10.448 ; Rise       ; CLK             ;
-;  XPOS[9]    ; CLK        ; 10.041 ; 10.041 ; Rise       ; CLK             ;
-; YPOS[*]     ; CLK        ; 11.578 ; 11.578 ; Rise       ; CLK             ;
-;  YPOS[0]    ; CLK        ; 11.578 ; 11.578 ; Rise       ; CLK             ;
-;  YPOS[1]    ; CLK        ; 11.572 ; 11.572 ; Rise       ; CLK             ;
-;  YPOS[2]    ; CLK        ; 10.721 ; 10.721 ; Rise       ; CLK             ;
-;  YPOS[3]    ; CLK        ; 11.560 ; 11.560 ; Rise       ; CLK             ;
-;  YPOS[4]    ; CLK        ; 11.383 ; 11.383 ; Rise       ; CLK             ;
-;  YPOS[5]    ; CLK        ; 10.957 ; 10.957 ; Rise       ; CLK             ;
-;  YPOS[6]    ; CLK        ; 10.568 ; 10.568 ; Rise       ; CLK             ;
-;  YPOS[7]    ; CLK        ; 9.723  ; 9.723  ; Rise       ; CLK             ;
-;  YPOS[8]    ; CLK        ; 11.092 ; 11.092 ; Rise       ; CLK             ;
-;  YPOS[9]    ; CLK        ; 10.814 ; 10.814 ; Rise       ; CLK             ;
-+-------------+------------+--------+--------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                           ;
-+-------------+------------+-------+-------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-------------+------------+-------+-------+------------+-----------------+
-; Bo[*]       ; CLK        ; 4.527 ; 4.527 ; Rise       ; CLK             ;
-;  Bo[3]      ; CLK        ; 4.527 ; 4.527 ; Rise       ; CLK             ;
-; DISP_ACTIVE ; CLK        ; 5.625 ; 5.625 ; Rise       ; CLK             ;
-; Go[*]       ; CLK        ; 4.929 ; 4.929 ; Rise       ; CLK             ;
-;  Go[3]      ; CLK        ; 4.929 ; 4.929 ; Rise       ; CLK             ;
-; HSYNC       ; CLK        ; 4.352 ; 4.352 ; Rise       ; CLK             ;
-; Ro[*]       ; CLK        ; 4.592 ; 4.592 ; Rise       ; CLK             ;
-;  Ro[3]      ; CLK        ; 4.592 ; 4.592 ; Rise       ; CLK             ;
-; VSYNC       ; CLK        ; 4.449 ; 4.449 ; Rise       ; CLK             ;
-; XPOS[*]     ; CLK        ; 4.213 ; 4.213 ; Rise       ; CLK             ;
-;  XPOS[0]    ; CLK        ; 4.313 ; 4.313 ; Rise       ; CLK             ;
-;  XPOS[1]    ; CLK        ; 4.349 ; 4.349 ; Rise       ; CLK             ;
-;  XPOS[2]    ; CLK        ; 4.228 ; 4.228 ; Rise       ; CLK             ;
-;  XPOS[3]    ; CLK        ; 4.658 ; 4.658 ; Rise       ; CLK             ;
-;  XPOS[4]    ; CLK        ; 4.553 ; 4.553 ; Rise       ; CLK             ;
-;  XPOS[5]    ; CLK        ; 4.456 ; 4.456 ; Rise       ; CLK             ;
-;  XPOS[6]    ; CLK        ; 4.274 ; 4.274 ; Rise       ; CLK             ;
-;  XPOS[7]    ; CLK        ; 4.213 ; 4.213 ; Rise       ; CLK             ;
-;  XPOS[8]    ; CLK        ; 4.616 ; 4.616 ; Rise       ; CLK             ;
-;  XPOS[9]    ; CLK        ; 4.517 ; 4.517 ; Rise       ; CLK             ;
-; YPOS[*]     ; CLK        ; 4.075 ; 4.075 ; Rise       ; CLK             ;
-;  YPOS[0]    ; CLK        ; 4.538 ; 4.538 ; Rise       ; CLK             ;
-;  YPOS[1]    ; CLK        ; 4.577 ; 4.577 ; Rise       ; CLK             ;
-;  YPOS[2]    ; CLK        ; 4.307 ; 4.307 ; Rise       ; CLK             ;
-;  YPOS[3]    ; CLK        ; 4.645 ; 4.645 ; Rise       ; CLK             ;
-;  YPOS[4]    ; CLK        ; 4.499 ; 4.499 ; Rise       ; CLK             ;
-;  YPOS[5]    ; CLK        ; 4.726 ; 4.726 ; Rise       ; CLK             ;
-;  YPOS[6]    ; CLK        ; 4.132 ; 4.132 ; Rise       ; CLK             ;
-;  YPOS[7]    ; CLK        ; 4.075 ; 4.075 ; Rise       ; CLK             ;
-;  YPOS[8]    ; CLK        ; 4.565 ; 4.565 ; Rise       ; CLK             ;
-;  YPOS[9]    ; CLK        ; 4.380 ; 4.380 ; Rise       ; CLK             ;
-+-------------+------------+-------+-------+------------+-----------------+
-
-
-+--------------------------------------------------------------+
-; Progagation Delay                                            ;
-+------------+-------------+--------+--------+--------+--------+
-; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
-+------------+-------------+--------+--------+--------+--------+
-; MODE       ; Bo[3]       ; 11.684 ; 12.324 ; 12.324 ; 11.684 ;
-; MODE       ; DISP_ACTIVE ; 12.531 ;        ;        ; 12.531 ;
-; MODE       ; Go[3]       ; 13.497 ; 12.506 ; 12.506 ; 13.497 ;
-; MODE       ; HSYNC       ; 8.738  ; 8.738  ; 8.738  ; 8.738  ;
-; MODE       ; Ro[3]       ; 12.653 ; 13.039 ; 13.039 ; 12.653 ;
-; MODE       ; VSYNC       ; 9.350  ; 9.350  ; 9.350  ; 9.350  ;
-; MODE       ; XPOS[0]     ; 9.677  ;        ;        ; 9.677  ;
-; MODE       ; XPOS[1]     ; 9.909  ;        ;        ; 9.909  ;
-; MODE       ; XPOS[2]     ; 9.954  ;        ;        ; 9.954  ;
-; MODE       ; XPOS[3]     ; 10.390 ;        ;        ; 10.390 ;
-; MODE       ; XPOS[4]     ; 9.815  ;        ;        ; 9.815  ;
-; MODE       ; XPOS[5]     ; 9.824  ;        ;        ; 9.824  ;
-; MODE       ; XPOS[6]     ; 9.234  ;        ;        ; 9.234  ;
-; MODE       ; XPOS[7]     ; 9.244  ;        ;        ; 9.244  ;
-; MODE       ; XPOS[8]     ; 9.288  ;        ;        ; 9.288  ;
-; MODE       ; XPOS[9]     ; 8.881  ;        ;        ; 8.881  ;
-; MODE       ; YPOS[0]     ; 10.523 ;        ;        ; 10.523 ;
-; MODE       ; YPOS[1]     ; 10.517 ;        ;        ; 10.517 ;
-; MODE       ; YPOS[2]     ; 9.666  ;        ;        ; 9.666  ;
-; MODE       ; YPOS[3]     ; 10.505 ;        ;        ; 10.505 ;
-; MODE       ; YPOS[4]     ; 10.328 ;        ;        ; 10.328 ;
-; MODE       ; YPOS[5]     ; 9.902  ;        ;        ; 9.902  ;
-; MODE       ; YPOS[6]     ; 9.513  ;        ;        ; 9.513  ;
-; MODE       ; YPOS[7]     ; 8.668  ;        ;        ; 8.668  ;
-; MODE       ; YPOS[8]     ; 10.037 ;        ;        ; 10.037 ;
-; MODE       ; YPOS[9]     ; 9.759  ;        ;        ; 9.759  ;
-+------------+-------------+--------+--------+--------+--------+
-
-
-+----------------------------------------------------------+
-; Minimum Progagation Delay                                ;
-+------------+-------------+-------+-------+-------+-------+
-; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+------------+-------------+-------+-------+-------+-------+
-; MODE       ; Bo[3]       ; 4.131 ; 4.168 ; 4.168 ; 4.131 ;
-; MODE       ; DISP_ACTIVE ; 5.050 ;       ;       ; 5.050 ;
-; MODE       ; Go[3]       ; 4.621 ; 4.747 ; 4.747 ; 4.621 ;
-; MODE       ; HSYNC       ; 3.378 ; 3.378 ; 3.378 ; 3.378 ;
-; MODE       ; Ro[3]       ; 4.247 ; 4.660 ; 4.660 ; 4.247 ;
-; MODE       ; VSYNC       ; 3.312 ; 3.312 ; 3.312 ; 3.312 ;
-; MODE       ; XPOS[0]     ; 4.152 ;       ;       ; 4.152 ;
-; MODE       ; XPOS[1]     ; 4.228 ;       ;       ; 4.228 ;
-; MODE       ; XPOS[2]     ; 4.234 ;       ;       ; 4.234 ;
-; MODE       ; XPOS[3]     ; 4.395 ;       ;       ; 4.395 ;
-; MODE       ; XPOS[4]     ; 4.196 ;       ;       ; 4.196 ;
-; MODE       ; XPOS[5]     ; 4.204 ;       ;       ; 4.204 ;
-; MODE       ; XPOS[6]     ; 3.964 ;       ;       ; 3.964 ;
-; MODE       ; XPOS[7]     ; 3.972 ;       ;       ; 3.972 ;
-; MODE       ; XPOS[8]     ; 3.995 ;       ;       ; 3.995 ;
-; MODE       ; XPOS[9]     ; 3.871 ;       ;       ; 3.871 ;
-; MODE       ; YPOS[0]     ; 4.261 ;       ;       ; 4.261 ;
-; MODE       ; YPOS[1]     ; 4.248 ;       ;       ; 4.248 ;
-; MODE       ; YPOS[2]     ; 3.915 ;       ;       ; 3.915 ;
-; MODE       ; YPOS[3]     ; 4.310 ;       ;       ; 4.310 ;
-; MODE       ; YPOS[4]     ; 4.230 ;       ;       ; 4.230 ;
-; MODE       ; YPOS[5]     ; 4.081 ;       ;       ; 4.081 ;
-; MODE       ; YPOS[6]     ; 3.935 ;       ;       ; 3.935 ;
-; MODE       ; YPOS[7]     ; 3.689 ;       ;       ; 3.689 ;
-; MODE       ; YPOS[8]     ; 4.042 ;       ;       ; 4.042 ;
-; MODE       ; YPOS[9]     ; 4.103 ;       ;       ; 4.103 ;
-+------------+-------------+-------+-------+-------+-------+
-
-
-+-------------------------------------------------------------------+
-; Setup Transfers                                                   ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; CLK        ; CLK      ; 2365     ; 0        ; 0        ; 0        ;
-+------------+----------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+-------------------------------------------------------------------+
-; Hold Transfers                                                    ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; CLK        ; CLK      ; 2365     ; 0        ; 0        ; 0        ;
-+------------+----------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
 
 
 ---------------
@@ -1392,10 +194,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 140   ; 140  ;
-; Unconstrained Output Ports      ; 26    ; 26   ;
-; Unconstrained Output Port Paths ; 306   ; 306  ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
 +---------------------------------+-------+------+
 
 
@@ -1405,7 +207,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun 21 11:43:33 2018
+    Info: Processing started: Thu Jun 21 13:08:51 2018
 Info: Command: quartus_sta VGA_Top -c VGA_Top
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1413,49 +215,34 @@ Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'VGA_Top.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name CLK CLK
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
 Info: Analyzing Slow Model
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.978
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    -3.978      -182.624 CLK 
-Info (332146): Worst-case hold slack is 0.445
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):     0.445         0.000 CLK 
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -1.631
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    -1.631       -71.285 CLK 
+Info (332140): No Minimum Pulse Width paths to report
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.958
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    -0.958       -38.541 CLK 
-Info (332146): Worst-case hold slack is 0.215
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):     0.215         0.000 CLK 
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -1.380
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    -1.380       -58.380 CLK 
+Info (332140): No Minimum Pulse Width paths to report
 Info (332001): The selected device family is not supported by the report_metastability command.
-Info (332102): Design is not fully constrained for setup requirements
-Info (332102): Design is not fully constrained for hold requirements
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 508 megabytes
-    Info: Processing ended: Thu Jun 21 11:43:33 2018
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 506 megabytes
+    Info: Processing ended: Thu Jun 21 13:08:52 2018
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

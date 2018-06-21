@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Jun 21 11:43:28 2018
+Fitter Status : Successful - Thu Jun 21 13:08:47 2018
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : VGA_Top
 Top-level Entity Name : VGA_Top
 Family : Cyclone II
 Device : EP2C20F484C7
 Timing Models : Final
-Total logic elements : 180 / 18,752 ( < 1 % )
-    Total combinational functions : 180 / 18,752 ( < 1 % )
-    Dedicated logic registers : 57 / 18,752 ( < 1 % )
-Total registers : 57
-Total pins : 42 / 315 ( 13 % )
+Total logic elements : 0 / 18,752 ( 0 % )
+    Total combinational functions : 0 / 18,752 ( 0 % )
+    Dedicated logic registers : 0 / 18,752 ( 0 % )
+Total registers : 0
+Total pins : 18 / 315 ( 6 % )
 Total virtual pins : 0
 Total memory bits : 0 / 239,616 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
