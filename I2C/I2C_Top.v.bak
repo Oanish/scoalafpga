@@ -1,0 +1,10 @@
+module I2C_Top (input SCLK,
+					 input [10:0] SDATA,
+					 input CLK, RST,
+					 output NEW_CODE,
+					 output [7:0] CODE);
+					 
+reg smh;
+
+
+endmodule 
