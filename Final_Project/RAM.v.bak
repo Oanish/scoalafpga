@@ -1,0 +1,10 @@
+module RAM (input MasterClock,
+				input ChipEnable,			//whether the RAM is active or not
+				input WriteEnable,		//whether the current operation is write
+				input OutputEnable,		//whether the current operation is read
+				input UpperB, LowerB,	//which byte of the memory location is being written/read
+				input [17:0] Address,	//selected address
+				inout [7:0] Data);		//colour byte (0-2 B, 3-4 G, 5-7 R)
+					  
+reg [7:0] memory [0:524287];
+

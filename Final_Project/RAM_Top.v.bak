@@ -1,0 +1,8 @@
+module RAM_Top (input MasterClock,				//the board oscillator clock
+					 input [3:0] Data,				//the data input from switches 6-9
+					 input [3:0] Address,			//the address input from switches 0-3
+					 input WriteEnable,				//the write operation select from key 3
+					 input OutputEnable,				//
+					 output [0:13] DigitAddr,
+					 output [0:13] DigitData);
+

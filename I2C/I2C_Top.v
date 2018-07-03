@@ -1,30 +1,23 @@
 module I2C_Top (input SCLK,
-					 input [10:0] SDATA,
+					 input SDATA,
 					 input CLK, RST,
 					 output NEW_CODE,
 					 output [7:0] CODE);
 					 
 reg SYNCED_CLK;
-reg [10:0] SYNCED_DATA;
 reg [10:0] SHIFT_REG;
 reg [7:0] DATA_REG;
 wire VALID_PACK;
 
 always@(posedge CLK)
-	begin
-		SYNCED_CLK<=SCLK;
-		SYNCED_DATA<=SDATA;
-	end
+	SYNCED_CLK<=SCLK;
 
 always@(posedge SYNCED_CLK)
-	begin
-		SHIFT_REG<=SYNCED_DATA;
-		DATA_REG<=SHIFT_REG[9:2];
-	end
+	SHIFT_REG<={SHIFT_REG[9:0],SDATA};
 	
-I2C_Counter DUT1(.SYNCED_CLK(SYNCED_CLK),
+I2C_Control DUT1(.SYNCED_CLK(SYNCED_CLK),
 					  .RST(RST),
-					  .DATA(SYNCED_DATA),
+					  .DATA(SDATA),
 					  .VALID_PACK(VALID_PACK));
 					  
 

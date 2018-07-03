@@ -1,5 +1,5 @@
 Analysis & Synthesis report for I2C
-Wed Jun 27 13:32:23 2018
+Tue Jul  3 10:42:58 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -42,7 +42,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 27 13:32:23 2018           ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul  3 10:42:58 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; I2C                                             ;
 ; Top-level Entity Name              ; I2C_Top                                         ;
@@ -51,7 +51,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 0                                               ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 23                                              ;
+; Total pins                         ; 13                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -185,7 +185,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 23    ;
+; I/O pins                                    ; 13    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 +---------------------------------------------+-------+
 
@@ -195,7 +195,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |I2C_Top                   ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |I2C_Top            ; work         ;
+; |I2C_Top                   ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |I2C_Top            ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -239,7 +239,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 27 13:32:22 2018
+    Info: Processing started: Tue Jul  3 10:42:57 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off I2C -c I2C
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file I2C_Top.v
@@ -247,7 +247,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file I2C_Top
 Info (12021): Found 1 design units, including 1 entities, in source file I2C_Counter.v
     Info (12023): Found entity 1: I2C_Counter
 Info (12127): Elaborating entity "I2C_Top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at I2C_Top.v(10): object "DATA_REG" assigned a value but never read
 Warning (10034): Output port "CODE" at I2C_Top.v(5) has no driver
 Warning (10034): Output port "NEW_CODE" at I2C_Top.v(4) has no driver
 Info (12128): Elaborating entity "I2C_Counter" for hierarchy "I2C_Counter:DUT1"
@@ -265,27 +264,17 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "CODE[7]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 14 input pin(s) that do not drive logic
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SCLK"
-    Warning (15610): No output dependent on input pin "SDATA[0]"
-    Warning (15610): No output dependent on input pin "SDATA[1]"
-    Warning (15610): No output dependent on input pin "SDATA[2]"
-    Warning (15610): No output dependent on input pin "SDATA[3]"
-    Warning (15610): No output dependent on input pin "SDATA[4]"
-    Warning (15610): No output dependent on input pin "SDATA[5]"
-    Warning (15610): No output dependent on input pin "SDATA[6]"
-    Warning (15610): No output dependent on input pin "SDATA[7]"
-    Warning (15610): No output dependent on input pin "SDATA[8]"
-    Warning (15610): No output dependent on input pin "SDATA[9]"
-    Warning (15610): No output dependent on input pin "SDATA[10]"
+    Warning (15610): No output dependent on input pin "SDATA"
     Warning (15610): No output dependent on input pin "CLK"
     Warning (15610): No output dependent on input pin "RST"
-Info (21057): Implemented 23 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 14 input pins
+Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
     Info (21059): Implemented 9 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 613 megabytes
-    Info: Processing ended: Wed Jun 27 13:32:23 2018
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 611 megabytes
+    Info: Processing ended: Tue Jul  3 10:42:58 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
