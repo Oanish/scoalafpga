@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'OE~reg0'
+Slack : -0.525
+TNS   : -0.525
+
+Type  : Slow Model Setup 'MasterClock'
+Slack : 0.126
+TNS   : 0.000
+
+Type  : Slow Model Hold 'MasterClock'
+Slack : -2.694
+TNS   : -2.694
+
+Type  : Slow Model Hold 'OE~reg0'
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'MasterClock'
+Slack : -1.631
+TNS   : -5.297
+
+Type  : Slow Model Minimum Pulse Width 'OE~reg0'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'OE~reg0'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Fast Model Setup 'MasterClock'
+Slack : 0.638
+TNS   : 0.000
+
+Type  : Fast Model Hold 'MasterClock'
+Slack : -1.721
+TNS   : -1.721
+
+Type  : Fast Model Hold 'OE~reg0'
+Slack : 0.252
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'MasterClock'
+Slack : -1.380
+TNS   : -4.380
+
+Type  : Fast Model Minimum Pulse Width 'OE~reg0'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

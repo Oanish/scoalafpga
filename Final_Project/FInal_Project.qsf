@@ -57,4 +57,54 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_AA3 -to AD[0]
+set_location_assignment PIN_AB3 -to AD[1]
+set_location_assignment PIN_AA4 -to AD[2]
+set_location_assignment PIN_AB4 -to AD[3]
+set_location_assignment PIN_L2 -to Address[3]
+set_location_assignment PIN_M1 -to Address[2]
+set_location_assignment PIN_M2 -to Address[1]
+set_location_assignment PIN_U11 -to Address[0]
+set_location_assignment PIN_AB5 -to CE
+set_location_assignment PIN_AB7 -to DT[3]
+set_location_assignment PIN_AA7 -to DT[2]
+set_location_assignment PIN_AB6 -to DT[1]
+set_location_assignment PIN_AA6 -to DT[0]
+set_location_assignment PIN_V12 -to Data[3]
+set_location_assignment PIN_M22 -to Data[2]
+set_location_assignment PIN_L21 -to Data[1]
+set_location_assignment PIN_L22 -to Data[0]
+set_location_assignment PIN_D4 -to DigitAddr[13]
+set_location_assignment PIN_F3 -to DigitAddr[12]
+set_location_assignment PIN_L8 -to DigitAddr[11]
+set_location_assignment PIN_J4 -to DigitAddr[10]
+set_location_assignment PIN_D6 -to DigitAddr[9]
+set_location_assignment PIN_D5 -to DigitAddr[8]
+set_location_assignment PIN_F4 -to DigitAddr[7]
+set_location_assignment PIN_D3 -to DigitAddr[6]
+set_location_assignment PIN_E4 -to DigitAddr[5]
+set_location_assignment PIN_E3 -to DigitAddr[4]
+set_location_assignment PIN_C1 -to DigitAddr[3]
+set_location_assignment PIN_C2 -to DigitAddr[2]
+set_location_assignment PIN_G6 -to DigitAddr[1]
+set_location_assignment PIN_G5 -to DigitAddr[0]
+set_location_assignment PIN_D1 -to DigitData[13]
+set_location_assignment PIN_D2 -to DigitData[12]
+set_location_assignment PIN_G3 -to DigitData[11]
+set_location_assignment PIN_H4 -to DigitData[10]
+set_location_assignment PIN_H5 -to DigitData[9]
+set_location_assignment PIN_H6 -to DigitData[8]
+set_location_assignment PIN_E1 -to DigitData[7]
+set_location_assignment PIN_E2 -to DigitData[6]
+set_location_assignment PIN_F1 -to DigitData[5]
+set_location_assignment PIN_F2 -to DigitData[4]
+set_location_assignment PIN_H1 -to DigitData[3]
+set_location_assignment PIN_H2 -to DigitData[2]
+set_location_assignment PIN_J1 -to DigitData[1]
+set_location_assignment PIN_J2 -to DigitData[0]
+set_location_assignment PIN_L1 -to MasterClock
+set_location_assignment PIN_T8 -to OE
+set_location_assignment PIN_T22 -to OutputEnable
+set_location_assignment PIN_T21 -to WriteEnable
+set_location_assignment PIN_AA10 -to WE
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

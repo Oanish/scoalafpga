@@ -2,14 +2,14 @@
 MasterClock => OE~reg0.CLK
 MasterClock => WE~reg0.CLK
 MasterClock => CE~reg0.CLK
-Data[0] <> BCD:DUT2.Data
-Data[1] <> BCD:DUT2.Data
-Data[2] <> BCD:DUT2.Data
-Data[3] <> BCD:DUT2.Data
-Address[0] <> BCD:DUT1.Data
-Address[1] <> BCD:DUT1.Data
-Address[2] <> BCD:DUT1.Data
-Address[3] <> BCD:DUT1.Data
+Data[0] => DT[0]$latch.DATAIN
+Data[1] => DT[1]$latch.DATAIN
+Data[2] => DT[2]$latch.DATAIN
+Data[3] => DT[3]$latch.DATAIN
+Address[0] => AD[0].IN1
+Address[1] => AD[1].IN1
+Address[2] => AD[2].IN1
+Address[3] => AD[3].IN1
 WriteEnable => CE.OUTPUTSELECT
 WriteEnable => WE.OUTPUTSELECT
 WriteEnable => OE~reg0.ENA
@@ -44,6 +44,18 @@ DigitData[10] <= BCD:DUT2.Segments
 DigitData[11] <= BCD:DUT2.Segments
 DigitData[12] <= BCD:DUT2.Segments
 DigitData[13] <= BCD:DUT2.Segments
+DT[0] <> BCD:DUT2.Data
+DT[0] <> DT[0]
+DT[1] <> BCD:DUT2.Data
+DT[1] <> DT[1]
+DT[2] <> BCD:DUT2.Data
+DT[2] <> DT[2]
+DT[3] <> BCD:DUT2.Data
+DT[3] <> DT[3]
+AD[0] <= AD[0].DB_MAX_OUTPUT_PORT_TYPE
+AD[1] <= AD[1].DB_MAX_OUTPUT_PORT_TYPE
+AD[2] <= AD[2].DB_MAX_OUTPUT_PORT_TYPE
+AD[3] <= AD[3].DB_MAX_OUTPUT_PORT_TYPE
 WE <= WE~reg0.DB_MAX_OUTPUT_PORT_TYPE
 OE <= OE~reg0.DB_MAX_OUTPUT_PORT_TYPE
 CE <= CE~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -59,18 +71,18 @@ Data[3] => Decoder0.IN0
 Data[3] => Decoder1.IN0
 Segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 Segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-Segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-Segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-Segments[4] <= Segments.DB_MAX_OUTPUT_PORT_TYPE
+Segments[2] <= Segments.DB_MAX_OUTPUT_PORT_TYPE
+Segments[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Segments[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 Segments[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 Segments[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-Segments[7] <= <GND>
-Segments[8] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-Segments[9] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Segments[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Segments[8] <= <GND>
+Segments[9] <= <GND>
 Segments[10] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-Segments[11] <= <VCC>
-Segments[12] <= <VCC>
-Segments[13] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Segments[11] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Segments[12] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Segments[13] <= <VCC>
 
 
 |RAM_Top|BCD:DUT2
@@ -83,17 +95,17 @@ Data[3] => Decoder0.IN0
 Data[3] => Decoder1.IN0
 Segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 Segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-Segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-Segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-Segments[4] <= Segments.DB_MAX_OUTPUT_PORT_TYPE
+Segments[2] <= Segments.DB_MAX_OUTPUT_PORT_TYPE
+Segments[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Segments[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 Segments[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 Segments[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-Segments[7] <= <GND>
-Segments[8] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-Segments[9] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Segments[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Segments[8] <= <GND>
+Segments[9] <= <GND>
 Segments[10] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-Segments[11] <= <VCC>
-Segments[12] <= <VCC>
-Segments[13] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Segments[11] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Segments[12] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Segments[13] <= <VCC>
 
 
