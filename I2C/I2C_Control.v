@@ -20,9 +20,9 @@ I2C_Counter DUT1(.SYNCED_CLK(SYNCED_CLK),
 assign VALID_PARITY = (DATA_REG[0]~^DATA_REG[7]~^DATA_REG[6]~^DATA_REG[5]~^DATA_REG[4]~^DATA_REG[3]~^DATA_REG[2]~^DATA_REG[1])~^PARITY_BIT;
 assign VALID_CODE = VALID_PARITY & VALID_PACK & CLK;
 
-always@(posedge CLK)
+always@(posedge SYNCED_CLK)
 	NEW_CODE<=VALID_CODE;
 	
-assign CODE = DATA_REG;
+assign CODE = (NEW_CODE) ? DATA_REG : 8'bz;
 
 endmodule 

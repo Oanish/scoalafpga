@@ -1,5 +1,5 @@
 Analysis & Synthesis report for I2C
-Thu Jul  5 12:50:35 2018
+Thu Jul  5 13:00:48 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,6 +17,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
  10. Elapsed Time Per Partition
  11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -42,7 +43,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jul  5 12:50:35 2018           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul  5 13:00:48 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; I2C                                             ;
 ; Top-level Entity Name              ; I2C_Top                                         ;
@@ -167,34 +168,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                ;
-+---------------------------------------------+----------------------------------------------+
-; Resource                                    ; Usage                                        ;
-+---------------------------------------------+----------------------------------------------+
-; Estimated Total logic elements              ; 48                                           ;
-;                                             ;                                              ;
-; Total combinational functions               ; 47                                           ;
-; Logic element usage by number of LUT inputs ;                                              ;
-;     -- 4 input functions                    ; 42                                           ;
-;     -- 3 input functions                    ; 5                                            ;
-;     -- <=2 input functions                  ; 0                                            ;
-;                                             ;                                              ;
-; Logic elements by mode                      ;                                              ;
-;     -- normal mode                          ; 47                                           ;
-;     -- arithmetic mode                      ; 0                                            ;
-;                                             ;                                              ;
-; Total registers                             ; 17                                           ;
-;     -- Dedicated logic registers            ; 17                                           ;
-;     -- I/O registers                        ; 0                                            ;
-;                                             ;                                              ;
-; I/O pins                                    ; 19                                           ;
-; Embedded Multiplier 9-bit elements          ; 0                                            ;
-; Maximum fan-out node                        ; I2C_Control:DUT1|I2C_Counter:DUT1|COUNTER[0] ;
-; Maximum fan-out                             ; 16                                           ;
-; Total fan-out                               ; 232                                          ;
-; Average fan-out                             ; 2.80                                         ;
-+---------------------------------------------+----------------------------------------------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 48         ;
+;                                             ;            ;
+; Total combinational functions               ; 47         ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 42         ;
+;     -- 3 input functions                    ; 5          ;
+;     -- <=2 input functions                  ; 0          ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 47         ;
+;     -- arithmetic mode                      ; 0          ;
+;                                             ;            ;
+; Total registers                             ; 17         ;
+;     -- Dedicated logic registers            ; 17         ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 19         ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+; Maximum fan-out node                        ; SYNCED_CLK ;
+; Maximum fan-out                             ; 16         ;
+; Total fan-out                               ; 232        ;
+; Average fan-out                             ; 2.80       ;
++---------------------------------------------+------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -250,7 +251,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jul  5 12:50:34 2018
+    Info: Processing started: Thu Jul  5 13:00:46 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off I2C -c I2C
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file I2C_Top.v
@@ -269,16 +270,32 @@ Info (12128): Elaborating entity "I2C_Control" for hierarchy "I2C_Control:DUT1"
 Info (12128): Elaborating entity "I2C_Counter" for hierarchy "I2C_Control:DUT1|I2C_Counter:DUT1"
 Warning (10230): Verilog HDL assignment warning at I2C_Counter.v(39): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "BCD" for hierarchy "BCD:DUT2"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "I2C_Control:DUT1|CODE[0]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "I2C_Control:DUT1|CODE[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "I2C_Control:DUT1|CODE[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "I2C_Control:DUT1|CODE[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "I2C_Control:DUT1|CODE[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "I2C_Control:DUT1|CODE[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "I2C_Control:DUT1|CODE[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "I2C_Control:DUT1|CODE[7]" feeding internal logic into a wire
+Info (144001): Generated suppressed messages file /home/student/scoalafpga/I2C/output_files/I2C.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 15 output pins
     Info (21061): Implemented 48 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
     Info: Peak virtual memory: 613 megabytes
-    Info: Processing ended: Thu Jul  5 12:50:35 2018
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Jul  5 13:00:48 2018
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/student/scoalafpga/I2C/output_files/I2C.map.smsg.
 
 
