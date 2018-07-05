@@ -59,15 +59,24 @@ set_global_assignment -name VERILOG_FILE I2C_Control.v
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_H15 -to SCLK
 set_location_assignment PIN_J14 -to SDATA
-set_location_assignment PIN_R22 -to RST
+set_location_assignment PIN_T21 -to RST
 set_location_assignment PIN_L1 -to CLK
-set_location_assignment PIN_Y21 -to CODE[7]
-set_location_assignment PIN_Y22 -to CODE[6]
-set_location_assignment PIN_W21 -to CODE[5]
-set_location_assignment PIN_W22 -to CODE[4]
-set_location_assignment PIN_V21 -to CODE[3]
-set_location_assignment PIN_V22 -to CODE[2]
-set_location_assignment PIN_U21 -to CODE[1]
-set_location_assignment PIN_U22 -to CODE[0]
 set_location_assignment PIN_R20 -to NEW_CODE
+set_location_assignment PIN_E1 -to CODE[7]
+set_location_assignment PIN_E2 -to CODE[6]
+set_location_assignment PIN_F1 -to CODE[5]
+set_location_assignment PIN_F2 -to CODE[4]
+set_location_assignment PIN_H1 -to CODE[3]
+set_location_assignment PIN_H2 -to CODE[2]
+set_location_assignment PIN_J1 -to CODE[1]
+set_location_assignment PIN_J2 -to CODE[0]
+set_global_assignment -name VERILOG_FILE output_files/Digit_Decoder.v
+set_global_assignment -name VERILOG_FILE Digit_Decoder.v
+set_global_assignment -name VERILOG_FILE BCD.v
+set_location_assignment PIN_D1 -to CODE[13]
+set_location_assignment PIN_D2 -to CODE[12]
+set_location_assignment PIN_G3 -to CODE[11]
+set_location_assignment PIN_H4 -to CODE[10]
+set_location_assignment PIN_H5 -to CODE[9]
+set_location_assignment PIN_H6 -to CODE[8]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

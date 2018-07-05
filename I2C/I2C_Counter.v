@@ -1,14 +1,12 @@
 module I2C_Counter (input SYNCED_CLK,
 						  input RST,
-						  input [10:0] SHIFT_REG,
-						  output reg [8:0] DATA_REG,
-						  output reg VALID_PACK);
+						  input SDATA,
+						  output reg [7:0] DATA_REG,
+						  output reg PARITY_BIT,
+						  output VALID_PACK);
 
 reg [3:0] COUNTER;
 reg START, STOP;
-wire DATA;
-
-assign DATA = SHIFT_REG[10];
 
 always@(negedge SYNCED_CLK)
 	if(!RST)
@@ -19,26 +17,29 @@ always@(negedge SYNCED_CLK)
 		end
 	else
 		begin
-			if(DATA==0 & COUNTER==0)
-				begin
-					START<=1;
-					COUNTER<=COUNTER+1;
-					DATA_REG<=SHIFT_REG[9:1];
-				end
+			case(COUNTER)
+				0: if(SDATA==0)
+						START<=1;
+				1:	DATA_REG[0]<=SDATA;
+				2: DATA_REG[1]<=SDATA;
+				3: DATA_REG[2]<=SDATA;
+				4: DATA_REG[3]<=SDATA;
+				5: DATA_REG[4]<=SDATA;
+				6: DATA_REG[5]<=SDATA;
+				7: DATA_REG[6]<=SDATA;
+				8: DATA_REG[7]<=SDATA;
+				9: PARITY_BIT<=SDATA;
+				10: if (SDATA==1)
+						STOP<=1;
+			endcase
 			
-			if(DATA==1 & COUNTER==10)
-				begin
-					STOP<=1;
-					COUNTER<=0;
-					VALID_PACK<=1;
-				end
-			
-			if(START==1 & COUNTER<10)
+			if(COUNTER==10)
+				COUNTER<=0;
+			else
 				COUNTER<=COUNTER+1;
-				
-			if(DATA==0 & COUNTER==10)
-				VALID_PACK<=0;
 		end
+
+assign VALID_PACK = START&STOP;
 
 endmodule 
 		

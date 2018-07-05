@@ -1,0 +1,32 @@
+|keyboard
+clk => b[0].CLK
+clk => b[1].CLK
+clk => b[2].CLK
+clk => b[3].CLK
+clk => data_curr[0].CLK
+clk => data_curr[1].CLK
+clk => data_curr[2].CLK
+clk => data_curr[3].CLK
+clk => data_curr[4].CLK
+clk => data_curr[5].CLK
+clk => data_curr[6].CLK
+clk => data_curr[7].CLK
+clk => flag.CLK
+data => data_curr[0].DATAIN
+data => data_curr[1].DATAIN
+data => data_curr[2].DATAIN
+data => data_curr[3].DATAIN
+data => data_curr[4].DATAIN
+data => data_curr[5].DATAIN
+data => data_curr[6].DATAIN
+data => data_curr[7].DATAIN
+led[0] <= led[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= led[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= led[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= led[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= led[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= led[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= led[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[7] <= led[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

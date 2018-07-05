@@ -1,0 +1,19 @@
+module Digit_Decoder (input [7:0] RAW_CODE,
+							 output [20:0] CODE);
+				
+wire [3:0] CODE_HUNDRED, CODE_TEN, CODE_UNIT;
+
+assign CODE_HUNDRED= RAW_CODE/100;
+assign CODE_TEN = (RAW_CODE%100)/10;
+assign CODE_UNIT = RAW_CODE%10;
+				
+BCD DUT1(.BINARY(CODE_HUNDRED),
+			.SEGMENTS(CODE[20:14]));
+
+BCD DUT2(.BINARY(CODE_TEN),
+			.SEGMENTS(CODE[13:7]));
+
+BCD DUT3(.BINARY(CODE_UNIT),
+			.SEGMENTS(CODE[6:0]));		
+			
+endmodule 

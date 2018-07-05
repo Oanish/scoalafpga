@@ -1,5 +1,5 @@
 Flow report for I2C
-Wed Jul  4 12:59:07 2018
+Thu Jul  5 12:50:48 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Wed Jul  4 12:59:07 2018           ;
+; Flow Status                        ; Successful - Thu Jul  5 12:50:48 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; I2C                                             ;
 ; Top-level Entity Name              ; I2C_Top                                         ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 41 / 18,752 ( < 1 % )                           ;
-;     Total combinational functions  ; 32 / 18,752 ( < 1 % )                           ;
-;     Dedicated logic registers      ; 28 / 18,752 ( < 1 % )                           ;
-; Total registers                    ; 28                                              ;
-; Total pins                         ; 13 / 315 ( 4 % )                                ;
+; Total logic elements               ; 48 / 18,752 ( < 1 % )                           ;
+;     Total combinational functions  ; 47 / 18,752 ( < 1 % )                           ;
+;     Dedicated logic registers      ; 17 / 18,752 ( < 1 % )                           ;
+; Total registers                    ; 17                                              ;
+; Total pins                         ; 19 / 315 ( 6 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/04/2018 12:58:53 ;
+; Start date & time ; 07/05/2018 12:50:34 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; I2C                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                     ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.153069833306238         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.153078423405277         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl               ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog) ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                        ; --            ; --          ; --             ;
@@ -93,11 +93,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 561 MB              ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 564 MB              ; 00:00:01                           ;
 ; Fitter                    ; 00:00:04     ; 1.0                     ; 694 MB              ; 00:00:04                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 558 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 507 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 788 MB              ; 00:00:00                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 554 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 506 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 788 MB              ; 00:00:00                           ;
 ; Total                     ; 00:00:07     ; --                      ; --                  ; 00:00:07                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
